@@ -1,0 +1,22 @@
+// .main-menu {
+//   @extend .container-fluid, .p-0, .sticky-top, .shadow;
+//   > nav {
+//     @extend .navbar, .navbar-expand-lg, .navbar-light,  .bg-light;
+//     > div {
+//       @extend .container-fluid;
+//       > a {
+//         @extend .navbar-brand;
+//         > img.logo {
+//           height: 75px;
+//         }
+//       }
+//     }
+//   }
+//   .btn {
+//     @extend .h6;
+//   }
+// }
+.offcanvas-title {
+  color: transparent !important;
+}
+

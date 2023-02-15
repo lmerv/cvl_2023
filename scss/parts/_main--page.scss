@@ -1,0 +1,82 @@
+/
+// section.person {
+//   article {
+//     @extend .row;
+//     @extend .mx-md-3;
+//     @extend .p-3;
+//     @extend .lh-lg;
+//     header {
+//       @extend .col-12;
+//       @extend .border-bottom;
+//       @extend .border-1;
+//       @extend .mb-md-5;
+//       > h1 {
+//         @extend .display-3;
+//       }
+//     }
+//     @include border-color-people;
+//     > & div:nth-child(1) {
+//       @extend .col-12;
+//       @extend .col-md-6;
+//       @extend .mt-4;
+//       > ul {
+//         @extend .px-0;
+//         > li {
+//           @extend .list-group-item;
+//           display: flex;
+//           @extend .d-none;
+//           @extend .d-md-block;
+//         }
+//       }  
+//     }
+//     > & div:nth-child(2) {
+//       @extend .col-12;
+//       @extend .col-md-6;
+//       @extend .my-auto;
+//     }
+//     > & div:nth-child(3) {
+//       @extend .col-12;
+//       @extend .col-md-6;
+//       @extend .d-none;
+//       @extend .d-md-block;
+//     }
+//     > & div:nth-child(4) {
+//       @extend .row;
+//       @extend .border-bottom;
+//       @extend .border-1;
+//       @extend .mt-2;
+//       @extend .mt-md-5;
+//       @include border-color-people;
+//       > p:nth-child(1) {
+//           @extend .col-12;
+//           @extend .col-md-6;
+//         }
+//       > p:nth-child(+2) {
+//           @extend .col-12;
+//           @extend .col-md-6;
+//         }
+//         > p:nth-child(+3) {
+//           @extend .col-12;
+//         }
+//       }
+//     > & div:nth-child(5) {
+//       @extend .row;
+//       @extend .mt-md-5;
+//       > ul {
+//         @extend .col-12;
+//         @extend .col-md-6;
+//         @extend .px-md-2;
+//         > li {
+//           @extend .m-0;
+//         }
+//       }
+//     }
+//     > img {
+//       @extend .img-fluid;
+//       @extend .mx-auto;
+//       @extend .d-block;
+//       // @extend .object-fit-cover;
+//       @extend .shadow;
+//     }
+//   }
+// }

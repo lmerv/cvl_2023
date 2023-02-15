@@ -1,0 +1,12 @@
+footer {
+  @extend .container-fluid;
+  @extend .bg-black;
+  min-height: 20vh; 
+  > div {
+    @extend .pt-3;
+    @extend .pt-md-5;
+    > p {
+      @extend .text-brand;
+    }
+  }
+}

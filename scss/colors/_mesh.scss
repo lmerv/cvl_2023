@@ -1,0 +1,8 @@
+@mixin mesh {
+  background-color:hsla(44,26%,92%,1);
+  background-image:
+  radial-gradient(at 22% 70%, hsla(216,98%,62%,1) 0px, transparent 50%),
+  radial-gradient(at 34% 47%, hsla(330,66%,62%,1) 0px, transparent 50%),
+  radial-gradient(at 40% 20%, hsla(26,97%,63%,1) 0px, transparent 50%),
+  radial-gradient(at 80% 0%, hsla(261,49%,61%,1) 0px, transparent 50%);
+}

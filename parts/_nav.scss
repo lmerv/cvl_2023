@@ -1,0 +1,22 @@
+h1.navbar-brand {
+  visibility: hidden;
+}
+button.navbar-toggler,
+&:hover, &:focus, &:visited {
+  outline: none!important;
+  border: 0;
+  .navbar-toggler-icon,
+    &:hover, &:focus, &:visited {
+      outline: none!important;
+      border: 0;
+  }
+  .navbar-toggler-menu {
+    visibility: hidden;
+  }
+}
+#offcanvasNavbarLabel {
+  visibility: hidden;
+}
+.offcanvas-body {
+  padding-top: 0;
+}

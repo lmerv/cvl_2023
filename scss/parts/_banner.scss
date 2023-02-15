@@ -1,0 +1,18 @@
+header.banner {
+  @extend .container-fluid;
+  min-height: 10vw;
+  @extend .p-0;
+  @extend .shadow;
+  // @include mesh-banner;
+  > figure {
+    > img {
+      @extend .img-fluid;
+      }
+    > img:first-of-type {
+    position: absolute;
+    mix-blend-mode: lighten;
+    filter: blur(50px);
+    opacity: 50%
+    }
+  }
+}

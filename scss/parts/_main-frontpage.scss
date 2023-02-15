@@ -1,0 +1,148 @@
+// 
+//  Mixins locales
+// 
+@mixin card-model-all {
+  @extend .card, .rounded-0, .text-reset, .lh-lg;
+    >&:hover {
+      @extend .shadow;
+    }
+}
+@mixin card-body-all {
+  > img {
+    @extend .card-img-top;
+    @extend .rounded-0;
+    object-fit: cover;
+    min-height: 15vw;
+  }
+  > div {
+    @extend .card-body;
+    min-height: 10vw;
+    > h3 {
+      @extend .pt-2;
+    }
+  }
+  > p {
+    @extend .card-footer;
+    @extend .text-muted;
+    @extend .m-0;
+  }
+}
+// 
+//  TOUTES LES SECTIONS
+// 
+section.all {
+  @extend .ps-0;
+  @extend .mt-2, .mt-md-4;
+  > header {
+    @extend .row;
+    @extend .align-items-end;
+    @extend .border-bottom, .border-3;
+    @extend .ms-2, .mb-0;      
+    > h2 {
+      @extend .col;
+      @extend .align-self-start;
+      @extend .h1;
+    }
+    > p {
+      @extend .col;
+      @extend .d-none;
+      @extend .d-md-block;
+      @extend .align-self-end;
+      @extend .text-end;
+      @extend .m-0;
+      > a {
+        @extend .h4;
+        @extend .text-muted;
+        @extend .text-decoration-none;
+      }
+    }
+
+  }
+  > div {
+    @extend .p-0;
+    @extend .m-0;
+    @extend .mt-2;
+  }  
+}
+// 
+//  NEWS
+//
+section.news {
+  @extend .container;
+    > header {
+      @extend .border-orange-400;     
+    }
+  > div {
+    @extend .row;
+    > div {
+      @extend .col-md-6;
+      @extend .col-lg-4;
+      @extend .mb-3;
+      > a {
+        @extend .text-dark;
+        @extend .text-decoration-none;
+        > div {
+          @include card-model-all;
+          @include card-body-all;
+        }        
+      }
+    }
+    > div:last-child {
+      @extend .col-12;
+      @extend .col-md-6;
+      @extend .col-lg-12;
+    }
+  }
+  > a {
+    width: 90%;
+    height: 50px;
+    @extend .d-block, .d-sm-block, .d-md-none;
+    @extend .btn, .btn-light, .btn-lg;
+    @extend .mx-auto;
+  }
+}
+// 
+//  REGATES
+// 
+section.regates {
+  @extend .container;
+  > header {
+    @extend .border-blue-400;
+  }
+  > div {
+    @extend .row;
+  }
+  > div.regates-infos {
+    @extend .gx-5;
+    > div {
+      @extend .col, .col-md-4, .col-lg-6;
+      @extend .p-1, .p-md-4;
+      > div {
+        @include card-model-all;
+        @include card-body-all;
+        @extend .d-flex;
+        p {
+          max-height: 10vw;
+          @extend .overflow-hidden;
+        }
+        a {
+          @extend .btn, .bg-light, .justify-content-center;
+        }
+      }
+    }
+
+  }
+}
+// 
+//  CUST
+// 
+section.promo-cust {
+  @extend .row;
+  @extend .bg-orange-400;
+  min-height: 25vw;
+  @extend .py-2;
+  > div {
+    @extend .my-2, .my-md-4;
+
+  }
+}

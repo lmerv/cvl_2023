@@ -1,0 +1,46 @@
+aside {
+  color: var(--primary);
+  @extend .container-fluid;
+  @extend  .bg-purple;
+  @extend .mt-5;
+  > div {
+    @extend .container;
+    @extend .py-2;
+    > div {
+      @extend .row;
+      > div:nth-child(0n+1) {
+        @extend .col-md-5;
+        @extend .pt-md-5;
+        > h3 {
+          font-family: var(--bs-font-family-custom);
+          font-style: italic;
+          @extend .border-bottom;
+          @extend .border-white;
+        }
+        > [itemprop = name] {
+          @extend .p-0;
+          @extend .py-1;
+        }
+        > ol[itemprop = address] {
+          @extend .list-group;
+          > li {
+            @extend .list-group-item;
+            @extend .bg-transparent;
+            @extend .p-0;
+            @extend .py-1;
+          }
+        }
+        > p {
+          @extend .mt-3;
+        }
+      }
+      > div:nth-child(0n+2) {
+        @extend .col-md-7;
+        @extend .p-0;
+        > img {
+          @extend .img-fluid;
+        }
+      }
+    }
+  }
+}

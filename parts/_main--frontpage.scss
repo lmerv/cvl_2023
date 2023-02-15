@@ -1,0 +1,77 @@
+// 
+//  NEWS (FRONTPAGE)
+//
+section.news {
+  @extend .container;
+  @extend .shadow;
+  > div {
+    @extend .row;
+    @extend .p-2;
+    @extend .p-lg-5;
+    > h2 {
+      @extend .col-12;
+      @extend .border-bottom;
+      @extend .border-2;
+      @extend .border-brand;
+      @extend .h2; 
+      @extend .p-2;
+    }
+    p {
+      @extend .col-12;
+      @extend .m-2;
+      @extend .m-md-3;
+    }
+  }
+}
+// 
+//  PARTNERS (FRONTPAGE)
+// 
+  section.partners {
+  @extend .g-3;
+  @extend .g-lg-5;
+  > div {
+    @extend .col-md-6;
+    // @extend .px-2;
+    > article {
+      @extend .card;
+      @extend .shadow;
+      @extend .rounded-0;
+      @extend .border-0;
+      @extend .border-top;
+      @extend .border-5;
+      @extend .lh-lg;
+      > & :nth-child(1) {
+        @extend .card-body;
+        @extend .p-0;
+        > h2 {
+          @extend .card-title;
+          @extend .ps-3;
+          @extend .pt-3;
+        }
+      }  
+      > & :nth-child(2) {
+        @extend .card-text;
+        > ul {
+          @extend .p-3;
+        }
+      }
+      > & :nth-child(0n+3) {
+        @extend .card-footer;
+        @extend .bg-brand-light;
+        @extend .text-end;
+      }
+    }
+    > article[aria-label = toffel] {
+      @extend .border-blue-400;
+    }
+    > article[aria-label = vermeille] {
+      @extend .border-purple-400;
+    }
+    > article[aria-label = jacquey] {
+      @extend.border-pink-400;
+    }
+    > article[aria-label = bondallaz] {
+      @extend .border-orange-400;
+    }
+  }
+}

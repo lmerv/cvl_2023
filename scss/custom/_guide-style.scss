@@ -1,0 +1,60 @@
+// Style override bootstrap & more
+body {
+  background-color: var(--bs-body-bg-rgb);
+  color: var(--bs-body-color-rgb);
+  padding: 0;
+  margin: 0;
+  ul, ol {
+    list-style-type: none;
+    @extend .p-0;
+    + li {
+      @extend .list-group-item;
+    }
+
+  }
+  & h1, & h2, & h3, & h4, & h5 {
+    font-family: var(--bs-font-family);
+    font-weight: 200;
+  }
+  button:focus, button:visited {
+    outline: none;
+  }
+}
+body#custom {
+// 
+//  NAVBAR (ALL)
+// 
+@import '../parts/nav';
+// 
+//  BANNER (ALL)
+// 
+@import '../parts/banner';
+// 
+//  MAIN (ALL)
+// 
+  > main {
+    @extend .container-fluid;
+  }
+// 
+//  FRONTPAGE)
+// 
+@import '../parts/main--frontpage';
+//
+//  
+// 
+@import '../parts/main--pages';
+// 
+//  ASIDE (ALL)
+// 
+@import '../parts/aside';
+//
+//  FOOTER (ALL)
+// 
+@import '../parts/footeer';
+//  
+//  ICONES (ALL)
+//
+  .bi {
+    font-size: 4rem;
+  }
+}
