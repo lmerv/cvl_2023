@@ -3,7 +3,6 @@ header.banner {
   min-height: 10vw;
   @extend .p-0;
   @extend .shadow;
-  // @include mesh-banner;
   > figure {
     > img {
       @extend .img-fluid;

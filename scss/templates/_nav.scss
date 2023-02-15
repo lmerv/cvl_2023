@@ -1,0 +1,16 @@
+
+nav.navbar {
+  @extend .sticky-top;
+  @extend .bg-light;
+  @extend .shadow;
+}
+[data-bs-toggle= offcanvas] {
+  @extend .border-0;
+  color: var(--dark);
+  &:focus, &:hover, &:visited {
+    @extend .border-0;
+  }
+}
+.offcanvas {
+  @extend .bg-light;
+}

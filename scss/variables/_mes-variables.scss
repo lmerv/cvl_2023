@@ -6,10 +6,10 @@
 // 
 //  Variables guide-style
 //
-@root {
---bs-body-color-rgb: 33, 37, 41;
---bs-body-bg-rgb: 240, 237, 229;
-}
+// @root {
+// --bs-body-color-rgb: 33, 37, 41;
+// --bs-body-bg-rgb: 240, 237, 229;
+// }
 // 
 // Nouvelles Couleurs
 // 
@@ -28,13 +28,12 @@ $custom-theme-colors: map-merge($theme-colors, (
   'yellow':       #EECC88,
   'purple':       #abaad0,
 ));
+
 //  Merge the maps
+
 //  On rajoute les nouvelles couleurs
-$theme-colors: map-merge($theme-colors, $custom-theme-colors);body {
-  background-color: rgb(39, 10, 10);
-}
-$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
-// @import "../../../vendor-bootsrap/bootstrap/bootstrap";
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
 // On édite background-color
 @each $color-bg-name, $color-bg-value in $custom-theme-colors {
   .bg-#{$color-bg-name} {
@@ -61,6 +60,8 @@ $utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
     border-color: $color-border-value !important;
   }
 }
+@import "../../../vendor/bootstrap/scss/bootstrap";
+
 //
 //  Mesh with mixins
 //

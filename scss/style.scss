@@ -2,8 +2,16 @@
 @charset "UTF-8";
 // THEME INFO
 @import 'info/info-theme';
+//
+// BOOTSTRAP
+// 
+@import '../../vendor/bootstrap-icons/bootstrap-icons.css';
+@import '../../vendor/bootstrap/scss/bootstrap.scss';
 //  VARIABLES : MIXINS & EXTEND BOOTSTRAP
-@import 'variables/mes-variables';
+// @import 'variables/mes-variables';
 //  PERSONNALISATION
-@import 'fonts/mes-fonts';
-@import 'custom/guide-style';
+// @import 'fonts/mes-fonts';
+// @import 'custom/guide-style';
+@import 'templates/nav';
+@import 'templates/banner';
+
