@@ -10,13 +10,15 @@
 //  VARIABLES : MIXINS & EXTEND BOOTSTRAP
 @import 'variables/mes-variables';
 @import 'variables/diagonal-container';
+// 
 //  PERSONNALISATION
+// 
 // @import 'fonts/mes-fonts';
 // @import 'custom/guide-style';
+@import 'templates/_body';
 @import 'templates/nav';
 @import 'templates/banner';
 @import 'templates/footeer';
-@import 'templates/promo';
 @import 'pages/frontpage';
 
 

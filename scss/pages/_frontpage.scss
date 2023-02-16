@@ -109,27 +109,28 @@ section.news {
 // 
 section.regates {
   @extend .container;
-  > header {
-    @extend .border-warning-subtle;
-  }
   > div {
-    @extend .row;
-  }
-  > div.regates-infos {
     @extend .gx-5;
     > div {
-      @extend .col, .col-md-4, .col-lg-6;
+      @extend .col, .col-md-3;
       @extend .p-1, .p-md-4;
       > div {
         @include card-model-all;
         @include card-body-all;
         @extend .d-flex;
-        p {
-          max-height: 10vw;
-          @extend .overflow-hidden;
+        @extend .p-2;
+        h3 {
+          @extend .fw-lighter, .border-0;
+
+        }
+        > div {
+          // max-height: 10vw;
+          // @extend .overflow-hidden;
+          @extend .lh-base, .p-0, .mb-2;
         }
         a {
-          @extend .btn, .bg-light, .justify-content-center;
+
+          @extend .btn, .btn-outline-primary, .justify-content-center;
         }
       }
     }
@@ -139,13 +140,18 @@ section.regates {
 // 
 //  CUST
 // 
-section.promo-cust {
-  @extend .row;
-  // @extend .bg-orange-400;
-  min-height: 25vw;
-  @extend .py-2;
+section.promo {
+  @extend .diagonal-section, .diagonal-section--flip-x;
+  // min-height: 20vw;
+  @extend .my-5;
+  @extend .bg-purple;
   > div {
-    @extend .my-2, .my-md-4;
-
+    @extend .container;
+    @extend .mx-auto, .py-5;
+    > div {
+      @extend .d-flex, .align-items-center;
+      min-height: 20vw;
+      @extend .bg-yellow;
+    }
   }
 }
