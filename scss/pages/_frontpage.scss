@@ -41,7 +41,7 @@ section.all {
     > h2 {
       @extend .col;
       @extend .align-self-start;
-      @extend .h1;
+      @extend .h1, .fw-light, .fst-italic;
     }
     > p {
       @extend .col;
@@ -51,7 +51,7 @@ section.all {
       @extend .text-end;
       @extend .m-0;
       > a {
-        @extend .h4;
+        @extend .h4, .fw-light, .fst-italic;
         @extend .text-muted;
         @extend .text-decoration-none;
       }
@@ -70,7 +70,7 @@ section.all {
 section.news {
   @extend .container;
     > header {
-      @extend .border-orange-400;     
+      @extend .border-warning-subtle;
     }
   > div {
     @extend .row;
@@ -87,7 +87,7 @@ section.news {
         }        
       }
     }
-    > div:last-child {
+    > div.sticky {
       @extend .col-12;
       @extend .col-md-6;
       @extend .col-lg-12;
@@ -100,6 +100,9 @@ section.news {
     @extend .btn, .btn-light, .btn-lg;
     @extend .mx-auto;
   }
+ h3 {
+    @extend .fw-light;
+  }
 }
 // 
 //  REGATES
@@ -107,7 +110,7 @@ section.news {
 section.regates {
   @extend .container;
   > header {
-    @extend .border-blue-400;
+    @extend .border-warning-subtle;
   }
   > div {
     @extend .row;
@@ -138,7 +141,7 @@ section.regates {
 // 
 section.promo-cust {
   @extend .row;
-  @extend .bg-orange-400;
+  // @extend .bg-orange-400;
   min-height: 25vw;
   @extend .py-2;
   > div {

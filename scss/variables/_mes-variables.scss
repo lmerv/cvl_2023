@@ -1,15 +1,3 @@
-//
-// BOOTSTRAP
-// 
-@import '../../../vendor/bootstrap/scss/bootstrap.scss';
-@import '../../../vendor/bootstrap-icons/bootstrap-icons.css';
-// 
-//  Variables guide-style
-//
-// @root {
-// --bs-body-color-rgb: 33, 37, 41;
-// --bs-body-bg-rgb: 240, 237, 229;
-// }
 // 
 // Nouvelles Couleurs
 // 
@@ -30,9 +18,8 @@ $custom-theme-colors: map-merge($theme-colors, (
 ));
 
 //  Merge the maps
-
 //  On rajoute les nouvelles couleurs
-$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+// $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
 // On édite background-color
 @each $color-bg-name, $color-bg-value in $custom-theme-colors {
@@ -40,27 +27,27 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
     background-color: $color-bg-value;
   }
 }
-// on édite du color
-@each $color-text-name, $color-text-value in $custom-theme-colors {
-  .color-#{$color-text-name} {
-    color: $color-text-value;
-    // opacity: var(--bs-text-opacity)
-  }
-}
-// On édite text-color
-@each $color-text-name, $color-text-value in $custom-theme-colors {
-  .text-#{$color-text-name} {
-    color: $color-text-value;
-    opacity: var(--bs-text-opacity)
-  }
-}
-// On édite des border-colors
-@each $color-border-name, $color-border-value in $custom-theme-colors {
-  .border-#{$color-border-name} {
-    border-color: $color-border-value !important;
-  }
-}
-@import "../../../vendor/bootstrap/scss/bootstrap";
+// // on édite du color
+// @each $color-text-name, $color-text-value in $custom-theme-colors {
+//   .color-#{$color-text-name} {
+//     color: $color-text-value;
+//     // opacity: var(--bs-text-opacity)
+//   }
+// }
+// // On édite text-color
+// @each $color-text-name, $color-text-value in $custom-theme-colors {
+//   .text-#{$color-text-name} {
+//     color: $color-text-value;
+//     opacity: var(--bs-text-opacity)
+//   }
+// }
+// // On édite des border-colors
+// @each $color-border-name, $color-border-value in $custom-theme-colors {
+//   .border-#{$color-border-name} {
+//     border-color: $color-border-value !important;
+//   }
+// }
+// @import "../../../vendor/bootstrap/scss/bootstrap";
 
 //
 //  Mesh with mixins
@@ -84,12 +71,16 @@ background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
 // 
 //  Diagonales 
 // 
-// svg {
-//   display: block;
-//   width: 100%;
-//   height: 20px;
-//   background: var(--bs-body-bg-rgb);
-//   ;
+// footer::before {
+//   background-color: #fff;
+//   height: 476.93984px;
+//   left: -3%;
+//   min-height: 386px;
+//   top: -258px;
+//   -webkit-transform: rotate(17deg) skew(17deg);
+//   transform: rotate(17deg) skew(17deg);
+//   width: 106%;
+//   z-index: 1;
 // }
 // 
 // Mixin pour container fluid oblique

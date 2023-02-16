@@ -1,12 +1,14 @@
 footer {
-  @extend .container-fluid;
-  @extend .bg-brand-footer;
+  @extend  .container-fluid;
+  @extend .border-top, .border-5, .border-primary-subtle;
+  background-color:  #333;
   min-height: 20vh; 
-  > div {
+  > div.footer-page {
+    @extend .d-block, .align-items-center;
     @extend .pt-3;
     @extend .pt-md-5;
-    > p {
-      @extend .text-brand;
+    p {
+      @extend .link-light, .fw-light;
     }
   }
 }

@@ -14,3 +14,6 @@ nav.navbar {
 .offcanvas {
   @extend .bg-light;
 }
+.offcanvas-title {
+  @extend .link-light;
+}

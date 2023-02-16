@@ -1,0 +1,10 @@
+section.promo {
+    @extend .diagonal-section, .diagonal-section--flip-x;
+    min-height: 20vw;
+    @extend .my-5;
+    @extend .bg-purple;
+    > div {
+        @extend .container;
+        @extend .py-5;
+    }
+}
