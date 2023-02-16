@@ -771,7 +771,7 @@ header.banner,
     max-width: 1320px;
   }
 }
-.row, section.news > div, section.all > header {
+.row, section.regates > div, section.news > div, section.all > header {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
@@ -780,7 +780,7 @@ header.banner,
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
-.row > *, section.news > div > *, section.all > header > * {
+.row > *, section.regates > div > *, section.news > div > *, section.all > header > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -789,7 +789,7 @@ header.banner,
   margin-top: var(--bs-gutter-y);
 }
 
-.col, section.regates > div > div, section.all > header > p, section.all > header > h2, section.all > header > .h2 {
+.col, section.all > header > p, section.all > header > h2, section.all > header > .h2 {
   flex: 1 0 0%;
 }
 
@@ -1211,7 +1211,7 @@ section.regates > div {
     flex: 0 0 auto;
     width: 16.66666667%;
   }
-  .col-md-3, section.regates > div > div {
+  .col-md-3 {
     flex: 0 0 auto;
     width: 25%;
   }
@@ -2423,7 +2423,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, section.regates > div > div > div .btn-check[disabled] + a, section.news > .btn-check[disabled] + a, .btn-check:disabled + .btn, section.regates > div > div > div .btn-check:disabled + a, section.news > .btn-check:disabled + a {
+.btn-check[disabled] + .btn, section.news > .btn-check[disabled] + a, .btn-check:disabled + .btn, section.news > .btn-check:disabled + a {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2616,11 +2616,11 @@ textarea.form-control-lg {
 .input-group > .form-floating:focus-within {
   z-index: 5;
 }
-.input-group .btn, .input-group section.regates > div > div > div a, section.regates > div > div > div .input-group a, .input-group section.news > a {
+.input-group .btn, .input-group section.news > a {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group section.regates > div > div > div a:focus, section.regates > div > div > div .input-group a:focus, .input-group section.news > a:focus {
+.input-group .btn:focus, .input-group section.news > a:focus {
   z-index: 5;
 }
 
@@ -2643,7 +2643,6 @@ textarea.form-control-lg {
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
-section.regates > div > div > div .input-group-lg > a,
 section.news.input-group-lg > a {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -2654,7 +2653,6 @@ section.news.input-group-lg > a {
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
-section.regates > div > div > div .input-group-sm > a,
 section.news.input-group-sm > a {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -2871,7 +2869,7 @@ section.news.input-group-sm > a {
   z-index: 4;
 }
 
-.btn, section.regates > div > div > div a, section.news > a {
+.btn, section.news > a {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -2905,41 +2903,41 @@ section.news.input-group-sm > a {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, section.regates > div > div > div a, section.news > a {
+  .btn, section.news > a {
     transition: none;
   }
 }
-.btn:hover, section.regates > div > div > div a:hover, section.news > a:hover {
+.btn:hover, section.news > a:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
-.btn-check + .btn:hover, section.regates > div > div > div .btn-check + a:hover, section.news > .btn-check + a:hover {
+.btn-check + .btn:hover, section.news > .btn-check + a:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
   border-color: var(--bs-btn-border-color);
 }
-.btn:focus-visible, section.regates > div > div > div a:focus-visible, section.news > a:focus-visible {
+.btn:focus-visible, section.news > a:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:focus-visible + .btn, section.regates > div > div > div .btn-check:focus-visible + a, section.news > .btn-check:focus-visible + a {
+.btn-check:focus-visible + .btn, section.news > .btn-check:focus-visible + a {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, section.regates > div > div > div .btn-check:checked + a, section.news > .btn-check:checked + a, :not(.btn-check) + .btn:active, section.regates > div > div > div :not(.btn-check) + a:active, section.news > :not(.btn-check) + a:active, .btn:first-child:active, section.regates > div > div > div a:first-child:active, section.news > a:first-child:active, .btn.active, section.regates > div > div > div a.active, section.news > a.active, .btn.show, section.regates > div > div > div a.show, section.news > a.show {
+.btn-check:checked + .btn, section.news > .btn-check:checked + a, :not(.btn-check) + .btn:active, section.news > :not(.btn-check) + a:active, .btn:first-child:active, section.news > a:first-child:active, .btn.active, section.news > a.active, .btn.show, section.news > a.show {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, section.regates > div > div > div .btn-check:checked + a:focus-visible, section.news > .btn-check:checked + a:focus-visible, :not(.btn-check) + .btn:active:focus-visible, section.regates > div > div > div :not(.btn-check) + a:active:focus-visible, section.news > :not(.btn-check) + a:active:focus-visible, .btn:first-child:active:focus-visible, section.regates > div > div > div a:first-child:active:focus-visible, section.news > a:first-child:active:focus-visible, .btn.active:focus-visible, section.regates > div > div > div a.active:focus-visible, section.news > a.active:focus-visible, .btn.show:focus-visible, section.regates > div > div > div a.show:focus-visible, section.news > a.show:focus-visible {
+.btn-check:checked + .btn:focus-visible, section.news > .btn-check:checked + a:focus-visible, :not(.btn-check) + .btn:active:focus-visible, section.news > :not(.btn-check) + a:active:focus-visible, .btn:first-child:active:focus-visible, section.news > a:first-child:active:focus-visible, .btn.active:focus-visible, section.news > a.active:focus-visible, .btn.show:focus-visible, section.news > a.show:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn:disabled, section.regates > div > div > div a:disabled, section.news > a:disabled, .btn.disabled, section.regates > div > div > div a.disabled, section.news > a.disabled, fieldset:disabled .btn, fieldset:disabled section.regates > div > div > div a, section.regates > div > div > div fieldset:disabled a, fieldset:disabled section.news > a {
+.btn:disabled, section.news > a:disabled, .btn.disabled, section.news > a.disabled, fieldset:disabled .btn, fieldset:disabled section.news > a {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -3083,7 +3081,7 @@ section.news.input-group-sm > a {
   --bs-btn-disabled-border-color: #212529;
 }
 
-.btn-outline-primary, section.regates > div > div > div a {
+.btn-outline-primary {
   --bs-btn-color: #0d6efd;
   --bs-btn-border-color: #0d6efd;
   --bs-btn-hover-color: #fff;
@@ -3241,14 +3239,14 @@ section.news.input-group-sm > a {
   color: var(--bs-btn-hover-color);
 }
 
-.btn-lg, section.news > a, .btn-group-lg > .btn, section.regates > div > div > div .btn-group-lg > a, section.news.btn-group-lg > a {
+.btn-lg, section.news > a, .btn-group-lg > .btn, section.news.btn-group-lg > a {
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-padding-x: 1rem;
   --bs-btn-font-size: 1.25rem;
   --bs-btn-border-radius: 0.5rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, section.regates > div > div > div .btn-group-sm > a, section.news.btn-group-sm > a {
+.btn-sm, .btn-group-sm > .btn, section.news.btn-group-sm > a {
   --bs-btn-padding-y: 0.25rem;
   --bs-btn-padding-x: 0.5rem;
   --bs-btn-font-size: 0.875rem;
@@ -3615,46 +3613,34 @@ section.news.input-group-sm > a {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, section.regates > div > div > div .btn-group > a, section.news.btn-group > a,
+.btn-group > .btn, section.news.btn-group > a,
 .btn-group-vertical > .btn,
-section.regates > div > div > div .btn-group-vertical > a,
 section.news.btn-group-vertical > a {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, section.regates > div > div > div .btn-group > .btn-check:checked + a, section.news.btn-group > .btn-check:checked + a,
+.btn-group > .btn-check:checked + .btn, section.news.btn-group > .btn-check:checked + a,
 .btn-group > .btn-check:focus + .btn,
-section.regates > div > div > div .btn-group > .btn-check:focus + a,
 section.news.btn-group > .btn-check:focus + a,
 .btn-group > .btn:hover,
-section.regates > div > div > div .btn-group > a:hover,
 section.news.btn-group > a:hover,
 .btn-group > .btn:focus,
-section.regates > div > div > div .btn-group > a:focus,
 section.news.btn-group > a:focus,
 .btn-group > .btn:active,
-section.regates > div > div > div .btn-group > a:active,
 section.news.btn-group > a:active,
 .btn-group > .btn.active,
-section.regates > div > div > div .btn-group > a.active,
 section.news.btn-group > a.active,
 .btn-group-vertical > .btn-check:checked + .btn,
-section.regates > div > div > div .btn-group-vertical > .btn-check:checked + a,
 section.news.btn-group-vertical > .btn-check:checked + a,
 .btn-group-vertical > .btn-check:focus + .btn,
-section.regates > div > div > div .btn-group-vertical > .btn-check:focus + a,
 section.news.btn-group-vertical > .btn-check:focus + a,
 .btn-group-vertical > .btn:hover,
-section.regates > div > div > div .btn-group-vertical > a:hover,
 section.news.btn-group-vertical > a:hover,
 .btn-group-vertical > .btn:focus,
-section.regates > div > div > div .btn-group-vertical > a:focus,
 section.news.btn-group-vertical > a:focus,
 .btn-group-vertical > .btn:active,
-section.regates > div > div > div .btn-group-vertical > a:active,
 section.news.btn-group-vertical > a:active,
 .btn-group-vertical > .btn.active,
-section.regates > div > div > div .btn-group-vertical > a.active,
 section.news.btn-group-vertical > a.active {
   z-index: 1;
 }
@@ -3671,26 +3657,22 @@ section.news.btn-group-vertical > a.active {
 .btn-group {
   border-radius: 0.375rem;
 }
-.btn-group > :not(.btn-check:first-child) + .btn, section.regates > div > div > div .btn-group > :not(.btn-check:first-child) + a, section.news.btn-group > :not(.btn-check:first-child) + a,
+.btn-group > :not(.btn-check:first-child) + .btn, section.news.btn-group > :not(.btn-check:first-child) + a,
 .btn-group > .btn-group:not(:first-child) {
   margin-left: calc(var(--bs-border-width) * -1);
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), section.regates > div > div > div .btn-group > a:not(:last-child):not(.dropdown-toggle), section.news.btn-group > a:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), section.news.btn-group > a:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn.dropdown-toggle-split:first-child,
-section.regates > div > div > div .btn-group > a.dropdown-toggle-split:first-child,
 section.news.btn-group > a.dropdown-toggle-split:first-child,
 .btn-group > .btn-group:not(:last-child) > .btn,
-section.regates > div > div > div .btn-group > .btn-group:not(:last-child) > a,
 .btn-group > section.news.btn-group:not(:last-child) > a {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3), section.regates > div > div > div .btn-group > a:nth-child(n+3), section.news.btn-group > a:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), section.news.btn-group > a:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-section.regates > div > div > div .btn-group > :not(.btn-check) + a,
 section.news.btn-group > :not(.btn-check) + a,
 .btn-group > .btn-group:not(:first-child) > .btn,
-section.regates > div > div > div .btn-group > .btn-group:not(:first-child) > a,
 .btn-group > section.news.btn-group:not(:first-child) > a {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -3707,12 +3689,12 @@ section.regates > div > div > div .btn-group > .btn-group:not(:first-child) > a,
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, section.regates > div > div > div .btn-group-sm > a + .dropdown-toggle-split, section.news.btn-group-sm > a + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, section.news.btn-group-sm > a + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, section.news > a + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, section.regates > div > div > div .btn-group-lg > a + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, section.news > a + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3722,24 +3704,22 @@ section.regates > div > div > div .btn-group > .btn-group:not(:first-child) > a,
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn, section.regates > div > div > div .btn-group-vertical > a, section.news.btn-group-vertical > a,
+.btn-group-vertical > .btn, section.news.btn-group-vertical > a,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), section.regates > div > div > div .btn-group-vertical > a:not(:first-child), section.news.btn-group-vertical > a:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), section.news.btn-group-vertical > a:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: calc(var(--bs-border-width) * -1);
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), section.regates > div > div > div .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle), section.news.btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), section.news.btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-section.regates > div > div > div .btn-group-vertical > .btn-group:not(:last-child) > a,
 .btn-group-vertical > section.news.btn-group:not(:last-child) > a {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn, section.regates > div > div > div .btn-group-vertical > a ~ .btn, section.regates > div > div > div .btn-group-vertical > .btn ~ a, section.regates > div > div > div .btn-group-vertical > a ~ a, section.news.btn-group-vertical > a ~ .btn, section.news.btn-group-vertical > .btn ~ a, section.news.btn-group-vertical > a ~ a,
+.btn-group-vertical > .btn ~ .btn, section.news.btn-group-vertical > a ~ .btn, section.news.btn-group-vertical > .btn ~ a, section.news.btn-group-vertical > a ~ a,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-section.regates > div > div > div .btn-group-vertical > .btn-group:not(:first-child) > a,
 .btn-group-vertical > section.news.btn-group:not(:first-child) > a {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -4295,7 +4275,7 @@ section.regates > div > div > div .btn-group-vertical > .btn-group:not(:first-ch
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.card, section.regates > div > div > div, section.news > div > div > a > div {
+.card, section.news > div > div > a > div {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 0.5rem;
@@ -4326,34 +4306,32 @@ section.regates > div > div > div .btn-group-vertical > .btn-group:not(:first-ch
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
 }
-.card > hr, section.regates > div > div > div > hr, section.news > div > div > a > div > hr {
+.card > hr, section.news > div > div > a > div > hr {
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group, section.regates > div > div > div > .list-group, section.news > div > div > a > div > .list-group {
+.card > .list-group, section.news > div > div > a > div > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.card > .list-group:first-child, section.regates > div > div > div > .list-group:first-child, section.news > div > div > a > div > .list-group:first-child {
+.card > .list-group:first-child, section.news > div > div > a > div > .list-group:first-child {
   border-top-width: 0;
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
-.card > .list-group:last-child, section.regates > div > div > div > .list-group:last-child, section.news > div > div > a > div > .list-group:last-child {
+.card > .list-group:last-child, section.news > div > div > a > div > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: var(--bs-card-inner-border-radius);
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
-.card > .card-header + .list-group, section.regates > div > div > div > .card-header + .list-group, section.news > div > div > a > div > .card-header + .list-group,
+.card > .card-header + .list-group, section.news > div > div > a > div > .card-header + .list-group,
 .card > .list-group + .card-footer,
-section.regates > div > div > div > .list-group + .card-footer,
-section.regates > div > div > div > .list-group + p,
 section.news > div > div > a > div > .list-group + .card-footer,
 section.news > div > div > a > div > .list-group + p {
   border-top: 0;
 }
 
-.card-body, section.regates > div > div > div > div, section.news > div > div > a > div > div {
+.card-body, section.news > div > div > a > div > div {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
@@ -4389,13 +4367,13 @@ section.news > div > div > a > div > .list-group + p {
   border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
 }
 
-.card-footer, section.regates > div > div > div > p, section.news > div > div > a > div > p {
+.card-footer, section.news > div > div > a > div > p {
   padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
   color: var(--bs-card-cap-color);
   background-color: var(--bs-card-cap-bg);
   border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);
 }
-.card-footer:last-child, section.regates > div > div > div > p:last-child, section.news > div > div > a > div > p:last-child {
+.card-footer:last-child, section.news > div > div > a > div > p:last-child {
   border-radius: 0 0 var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius);
 }
 
@@ -4427,7 +4405,6 @@ section.news > div > div > a > div > .list-group + p {
 
 .card-img,
 .card-img-top,
-section.regates > div > div > div > img,
 section.news > div > div > a > div > img,
 .card-img-bottom {
   width: 100%;
@@ -4435,7 +4412,6 @@ section.news > div > div > a > div > img,
 
 .card-img,
 .card-img-top,
-section.regates > div > div > div > img,
 section.news > div > div > a > div > img {
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
@@ -4447,7 +4423,7 @@ section.news > div > div > a > div > img {
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
 
-.card-group > .card, section.regates > div > div.card-group > div, section.news > div > div > a.card-group > div {
+.card-group > .card, section.news > div > div > a.card-group > div {
   margin-bottom: var(--bs-card-group-margin);
 }
 @media (min-width: 576px) {
@@ -4455,55 +4431,43 @@ section.news > div > div > a > div > img {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card, section.regates > div > div.card-group > div, section.news > div > div > a.card-group > div {
+  .card-group > .card, section.news > div > div > a.card-group > div {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card, section.regates > div > div.card-group > div + .card, section.regates > div > div.card-group > .card + div, section.regates > div > div.card-group > div + div, section.news > div > div > a.card-group > div + .card, section.news > div > div > a.card-group > .card + div, section.news > div > div > a.card-group > div + div {
+  .card-group > .card + .card, section.news > div > div > a.card-group > div + .card, section.news > div > div > a.card-group > .card + div, section.news > div > div > a.card-group > div + div {
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:not(:last-child), section.regates > div > div.card-group > div:not(:last-child), section.news > div > div > a.card-group > div:not(:last-child) {
+  .card-group > .card:not(:last-child), section.news > div > div > a.card-group > div:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top, .card-group > .card:not(:last-child) section.regates > div > div > div > img, section.regates > div > div.card-group > div:not(:last-child) .card-img-top, section.regates > div > div.card-group > div:not(:last-child) section.regates > div > div > div > img, .card-group > .card:not(:last-child) section.news > div > div > a > div > img, section.regates > div > div.card-group > div:not(:last-child) section.news > div > div > a > div > img, section.news > div > div > a.card-group > div:not(:last-child) .card-img-top, section.news > div > div > a.card-group > div:not(:last-child) section.regates > div > div > div > img, section.news > div > div > a.card-group > div:not(:last-child) section.news > div > div > a > div > img,
+  .card-group > .card:not(:last-child) .card-img-top, .card-group > .card:not(:last-child) section.news > div > div > a > div > img, section.news > div > div > a.card-group > div:not(:last-child) .card-img-top, section.news > div > div > a.card-group > div:not(:last-child) section.news > div > div > a > div > img,
   .card-group > .card:not(:last-child) .card-header,
-  section.regates > div > div.card-group > div:not(:last-child) .card-header,
   section.news > div > div > a.card-group > div:not(:last-child) .card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom, section.regates > div > div.card-group > div:not(:last-child) .card-img-bottom, section.news > div > div > a.card-group > div:not(:last-child) .card-img-bottom,
+  .card-group > .card:not(:last-child) .card-img-bottom, section.news > div > div > a.card-group > div:not(:last-child) .card-img-bottom,
   .card-group > .card:not(:last-child) .card-footer,
-  .card-group > .card:not(:last-child) section.regates > div > div > div > p,
-  section.regates > div > div.card-group > div:not(:last-child) .card-footer,
-  section.regates > div > div.card-group > div:not(:last-child) section.regates > div > div > div > p,
   .card-group > .card:not(:last-child) section.news > div > div > a > div > p,
-  section.regates > div > div.card-group > div:not(:last-child) section.news > div > div > a > div > p,
   section.news > div > div > a.card-group > div:not(:last-child) .card-footer,
-  section.news > div > div > a.card-group > div:not(:last-child) section.regates > div > div > div > p,
   section.news > div > div > a.card-group > div:not(:last-child) section.news > div > div > a > div > p {
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:first-child), section.regates > div > div.card-group > div:not(:first-child), section.news > div > div > a.card-group > div:not(:first-child) {
+  .card-group > .card:not(:first-child), section.news > div > div > a.card-group > div:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top, .card-group > .card:not(:first-child) section.regates > div > div > div > img, section.regates > div > div.card-group > div:not(:first-child) .card-img-top, section.regates > div > div.card-group > div:not(:first-child) section.regates > div > div > div > img, .card-group > .card:not(:first-child) section.news > div > div > a > div > img, section.regates > div > div.card-group > div:not(:first-child) section.news > div > div > a > div > img, section.news > div > div > a.card-group > div:not(:first-child) .card-img-top, section.news > div > div > a.card-group > div:not(:first-child) section.regates > div > div > div > img, section.news > div > div > a.card-group > div:not(:first-child) section.news > div > div > a > div > img,
+  .card-group > .card:not(:first-child) .card-img-top, .card-group > .card:not(:first-child) section.news > div > div > a > div > img, section.news > div > div > a.card-group > div:not(:first-child) .card-img-top, section.news > div > div > a.card-group > div:not(:first-child) section.news > div > div > a > div > img,
   .card-group > .card:not(:first-child) .card-header,
-  section.regates > div > div.card-group > div:not(:first-child) .card-header,
   section.news > div > div > a.card-group > div:not(:first-child) .card-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom, section.regates > div > div.card-group > div:not(:first-child) .card-img-bottom, section.news > div > div > a.card-group > div:not(:first-child) .card-img-bottom,
+  .card-group > .card:not(:first-child) .card-img-bottom, section.news > div > div > a.card-group > div:not(:first-child) .card-img-bottom,
   .card-group > .card:not(:first-child) .card-footer,
-  .card-group > .card:not(:first-child) section.regates > div > div > div > p,
-  section.regates > div > div.card-group > div:not(:first-child) .card-footer,
-  section.regates > div > div.card-group > div:not(:first-child) section.regates > div > div > div > p,
   .card-group > .card:not(:first-child) section.news > div > div > a > div > p,
-  section.regates > div > div.card-group > div:not(:first-child) section.news > div > div > a > div > p,
   section.news > div > div > a.card-group > div:not(:first-child) .card-footer,
-  section.news > div > div > a.card-group > div:not(:first-child) section.regates > div > div > div > p,
   section.news > div > div > a.card-group > div:not(:first-child) section.news > div > div > a > div > p {
     border-bottom-left-radius: 0;
   }
@@ -4797,7 +4761,7 @@ section.news > div > div > a > div > img {
   display: none;
 }
 
-.btn .badge, section.regates > div > div > div a .badge, section.news > a .badge {
+.btn .badge, section.news > a .badge {
   position: relative;
   top: -1px;
 }
@@ -6816,7 +6780,7 @@ section.news > div > div > a > div > img {
   background-color: currentcolor;
   opacity: 0.5;
 }
-.placeholder.btn::before, section.regates > div > div > div a.placeholder::before, section.news > a.placeholder::before {
+.placeholder.btn::before, section.news > a.placeholder::before {
   display: inline-block;
   content: "";
 }
@@ -7280,7 +7244,7 @@ section.news > div > div > a > div > img {
   display: table-cell !important;
 }
 
-.d-flex, section.promo > div > div, section.regates > div > div > div {
+.d-flex, section.promo > div > div, section.regates > div > div {
   display: flex !important;
 }
 
@@ -7292,7 +7256,7 @@ section.news > div > div > a > div > img {
   display: none !important;
 }
 
-.shadow, section.regates > div > div > div:hover, section.news > div > div > a > div:hover, header.banner, nav.navbar {
+.shadow, section.regates > div > div:hover, section.news > div > div > a > div:hover, header.banner, nav.navbar {
   box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
 }
 
@@ -7392,7 +7356,7 @@ section.news > div > div > a > div > img {
   border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
-.border-0, section.regates > div > div > div h3, section.regates > div > div > div .h3, [data-bs-toggle=offcanvas]:focus, [data-bs-toggle=offcanvas]:hover, [data-bs-toggle=offcanvas]:visited, [data-bs-toggle=offcanvas] {
+.border-0, [data-bs-toggle=offcanvas]:focus, [data-bs-toggle=offcanvas]:hover, [data-bs-toggle=offcanvas]:visited, [data-bs-toggle=offcanvas] {
   border: 0 !important;
 }
 
@@ -7617,7 +7581,7 @@ section.news > div > div > a > div > img {
   flex-direction: row !important;
 }
 
-.flex-column {
+.flex-column, section.regates > div > div {
   flex-direction: column !important;
 }
 
@@ -7665,7 +7629,7 @@ section.news > div > div > a > div > img {
   justify-content: flex-end !important;
 }
 
-.justify-content-center, section.regates > div > div > div a {
+.justify-content-center {
   justify-content: center !important;
 }
 
@@ -7781,7 +7745,7 @@ section.news > div > div > a > div > img {
   order: 6 !important;
 }
 
-.m-0, section.regates > div > div > div > p, section.news > div > div > a > div > p, section.all > div, section.all > header > p, body {
+.m-0, section.news > div > div > a > div > p, section.all > div, section.all > header > p {
   margin: 0 !important;
 }
 
@@ -7943,7 +7907,7 @@ section.news > div > div > a > div > img {
   margin-bottom: 0.25rem !important;
 }
 
-.mb-2, section.regates > div > div > div > div {
+.mb-2 {
   margin-bottom: 0.5rem !important;
 }
 
@@ -7991,15 +7955,15 @@ section.news > div > div > a > div > img {
   margin-left: auto !important;
 }
 
-.p-0, section.regates > div > div > div > div, section.all > div, header.banner, body {
+.p-0, section.regates > div > div, section.all > div, header.banner {
   padding: 0 !important;
 }
 
-.p-1, section.regates > div > div {
+.p-1 {
   padding: 0.25rem !important;
 }
 
-.p-2, section.regates > div > div > div {
+.p-2 {
   padding: 0.5rem !important;
 }
 
@@ -8083,7 +8047,7 @@ section.news > div > div > a > div > img {
   padding-top: 0.25rem !important;
 }
 
-.pt-2, section.regates > div > div > div > div > h3, section.regates > div > div > div > div > .h3, section.news > div > div > a > div > div > h3, section.news > div > div > a > div > div > .h3 {
+.pt-2, section.news > div > div > a > div > div > h3, section.news > div > div > a > div > div > .h3 {
   padding-top: 0.5rem !important;
 }
 
@@ -8279,7 +8243,7 @@ section.news > div > div > a > div > img {
   font-style: normal !important;
 }
 
-.fw-lighter, section.regates > div > div > div h3, section.regates > div > div > div .h3 {
+.fw-lighter {
   font-weight: lighter !important;
 }
 
@@ -8315,11 +8279,11 @@ section.news > div > div > a > div > img {
   line-height: 1.25 !important;
 }
 
-.lh-base, section.regates > div > div > div > div {
+.lh-base {
   line-height: 1.5 !important;
 }
 
-.lh-lg, section.regates > div > div > div, section.news > div > div > a > div, body {
+.lh-lg, section.news > div > div > a > div {
   line-height: 2 !important;
 }
 
@@ -8429,7 +8393,7 @@ section.news > div > div > a > div > img {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-muted, section.regates > div > div > div > p, section.news > div > div > a > div > p, section.all > header > p > a {
+.text-muted, section.news > div > div > a > div > p, section.all > header > p > a {
   --bs-text-opacity: 1;
   color: var(--bs-secondary-color) !important;
 }
@@ -8459,7 +8423,7 @@ section.news > div > div > a > div > img {
   color: var(--bs-emphasis-color) !important;
 }
 
-.text-reset, section.regates > div > div > div, section.news > div > div > a > div {
+.text-reset, section.news > div > div > a > div {
   --bs-text-opacity: 1;
   color: inherit !important;
 }
@@ -8667,7 +8631,7 @@ section.news > div > div > a > div > img {
   border-radius: var(--bs-border-radius) !important;
 }
 
-.rounded-0, section.regates > div > div > div > img, section.regates > div > div > div, section.news > div > div > a > div > img, section.news > div > div > a > div {
+.rounded-0, section.news > div > div > a > div > img, section.news > div > div > a > div {
   border-radius: 0 !important;
 }
 
@@ -9512,7 +9476,7 @@ section.news > div > div > a > div > img {
   .flex-md-fill {
     flex: 1 1 auto !important;
   }
-  .flex-md-row {
+  .flex-md-row, section.regates > div > div {
     flex-direction: row !important;
   }
   .flex-md-column {
@@ -9811,7 +9775,7 @@ section.news > div > div > a > div > img {
   .p-md-3 {
     padding: 1rem !important;
   }
-  .p-md-4, section.regates > div > div {
+  .p-md-4 {
     padding: 1.5rem !important;
   }
   .p-md-5 {
@@ -11803,18 +11767,6 @@ section.news > div > div > a > div > img {
     clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
   }
 }
-body {
-  background-color: var(--bs-body-bg-rgb);
-  color: var(--bs-body-color-rgb);
-}
-body h1, body .h1, body section.all > header > h2, body section.all > header > .h2, body h2, body .h2, body h3, body .h3, body h4, body .h4, body section.all > header > p > a, body h5, body .h5 {
-  font-family: var(--bs-font-family);
-  font-weight: 200;
-}
-body button:focus, body button:visited {
-  outline: none;
-}
-
 [data-bs-toggle=offcanvas] {
   color: var(--dark);
 }
@@ -11842,13 +11794,6 @@ section.news > div > div > a > div > div {
 section.news > a {
   width: 90%;
   height: 50px;
-}
-section.regates > div > div > div > img {
-  object-fit: cover;
-  min-height: 15vw;
-}
-section.regates > div > div > div > div {
-  min-height: 10vw;
 }
 section.promo > div > div {
   min-height: 20vw;

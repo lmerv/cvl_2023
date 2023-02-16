@@ -110,28 +110,43 @@ section.news {
 section.regates {
   @extend .container;
   > div {
-    @extend .gx-5;
+    @extend .row, .gx-5;
+    // > div {
+    //   @extend .col, .col-md-3;
+    //   @extend .p-1, .p-md-4;
+    //   > div {
+    //     @include card-model-all;
+    //     @include card-body-all;
+    //     @extend .d-flex;
+    //     @extend .p-2;
+    //     h3 {
+    //       @extend .fw-lighter, .border-0;
+
+    //     }
+    //     > div {
+    //       // max-height: 10vw;
+    //       // @extend .overflow-hidden;
+    //       @extend .lh-base, .p-0, .mb-2;
+    //     }
+    //     a {
+
+    //       @extend .btn, .btn-outline-primary, .justify-content-center;
+    //     }
+    //   }
+    // }
     > div {
-      @extend .col, .col-md-3;
-      @extend .p-1, .p-md-4;
-      > div {
-        @include card-model-all;
-        @include card-body-all;
-        @extend .d-flex;
-        @extend .p-2;
-        h3 {
-          @extend .fw-lighter, .border-0;
-
-        }
-        > div {
-          // max-height: 10vw;
-          // @extend .overflow-hidden;
-          @extend .lh-base, .p-0, .mb-2;
-        }
-        a {
-
-          @extend .btn, .btn-outline-primary, .justify-content-center;
-        }
+      @extend .d-flex, .flex-column, .flex-md-row;
+      @extend .p-0;
+      >&:hover {
+        @extend .shadow;
+      }
+      > div:first-child {
+        @extend .d-block, .w-md-100;
+        @extend .p-0, .m-0;
+      }
+     > div:last-child {
+      min-height: 150px;  
+      @extend .m-0, .p-2, .p-md-3;
       }
     }
 
