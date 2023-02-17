@@ -134,23 +134,57 @@ section.regates {
     //     }
     //   }
     // }
-    > div {
+  //   > div {
+  //     @extend .d-flex;
+  //     @extend .p-0;
+  //     >&:hover {
+  //       @extend .shadow;
+  //     }
+  //     > div:first-child {
+  //       @extend .d-block, .w-md-100;
+  //       @extend .p-0, .m-0;
+  //     }
+  //    > div:last-child {
+  //     min-height: 150px;  
+  //     @extend .m-0, .p-2, .p-md-3;
+  //     }
+  //   }
+
+  // }
+
+    div.card-regates {
+      @extend .d-flex, .flex-wrap, .flex-column, .flex-md-row;
+      div:last-child {
+        @extend .d-flex, .flex-column;
+        > h3 {
+          @extend .bg-primary;
+        }
+      }
+    }
+  }
+}
+
+section.test {
+  @extend .container;
+  > div {
+    @extend .row;
+    div.test-one {
       @extend .d-flex, .flex-column, .flex-md-row;
-      @extend .p-0;
-      >&:hover {
-        @extend .shadow;
+      // div.one, div.two {
+      //   width:250px;
+      //   height: 250px;
+      // }
+      div.one {
+        min-width: 40%;
+        @extend .bg-success;
       }
-      > div:first-child {
-        @extend .d-block, .w-md-100;
-        @extend .p-0, .m-0;
-      }
-     > div:last-child {
-      min-height: 150px;  
-      @extend .m-0, .p-2, .p-md-3;
+      div.two {
+        @extend .bg-warning;
       }
     }
 
   }
+
 }
 // 
 //  CUST

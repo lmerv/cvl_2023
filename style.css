@@ -728,7 +728,7 @@ progress {
   color: var(--bs-secondary-color);
 }
 
-.container, section.promo > div, section.regates, section.news,
+.container, section.promo > div, section.test, section.regates, section.news,
 .container-fluid,
 footer,
 header.banner,
@@ -747,31 +747,31 @@ header.banner,
 }
 
 @media (min-width: 576px) {
-  .container-sm, .container, section.promo > div, section.regates, section.news {
+  .container-sm, .container, section.promo > div, section.test, section.regates, section.news {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container, section.promo > div, section.regates, section.news {
+  .container-md, .container-sm, .container, section.promo > div, section.test, section.regates, section.news {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container, section.promo > div, section.regates, section.news {
+  .container-lg, .container-md, .container-sm, .container, section.promo > div, section.test, section.regates, section.news {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container, section.promo > div, section.regates, section.news {
+  .container-xl, .container-lg, .container-md, .container-sm, .container, section.promo > div, section.test, section.regates, section.news {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, section.promo > div, section.regates, section.news {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, section.promo > div, section.test, section.regates, section.news {
     max-width: 1320px;
   }
 }
-.row, section.regates > div, section.news > div, section.all > header {
+.row, section.test > div, section.regates > div, section.news > div, section.all > header {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
@@ -780,7 +780,7 @@ header.banner,
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
-.row > *, section.regates > div > *, section.news > div > *, section.all > header > * {
+.row > *, section.test > div > *, section.regates > div > *, section.news > div > *, section.all > header > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -3874,7 +3874,7 @@ section.news.btn-group > :not(.btn-check) + a,
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
-.navbar > .container, section.promo.navbar > div, .navbar > section.regates, .navbar > section.news,
+.navbar > .container, section.promo.navbar > div, .navbar > section.test, .navbar > section.regates, .navbar > section.news,
 .navbar > .container-fluid,
 .navbar > footer,
 .navbar > header.banner,
@@ -7244,7 +7244,7 @@ section.news > div > div > a > div > img {
   display: table-cell !important;
 }
 
-.d-flex, section.promo > div > div, section.regates > div > div {
+.d-flex, section.promo > div > div, section.test > div div.test-one, section.regates > div div.card-regates div:last-child, section.regates > div div.card-regates {
   display: flex !important;
 }
 
@@ -7256,7 +7256,7 @@ section.news > div > div > a > div > img {
   display: none !important;
 }
 
-.shadow, section.regates > div > div:hover, section.news > div > div > a > div:hover, header.banner, nav.navbar {
+.shadow, section.news > div > div > a > div:hover, header.banner, nav.navbar {
   box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
 }
 
@@ -7581,7 +7581,7 @@ section.news > div > div > a > div > img {
   flex-direction: row !important;
 }
 
-.flex-column, section.regates > div > div {
+.flex-column, section.test > div div.test-one, section.regates > div div.card-regates div:last-child, section.regates > div div.card-regates {
   flex-direction: column !important;
 }
 
@@ -7609,7 +7609,7 @@ section.news > div > div > a > div > img {
   flex-shrink: 1 !important;
 }
 
-.flex-wrap {
+.flex-wrap, section.regates > div div.card-regates {
   flex-wrap: wrap !important;
 }
 
@@ -7955,7 +7955,7 @@ section.news > div > div > a > div > img {
   margin-left: auto !important;
 }
 
-.p-0, section.regates > div > div, section.all > div, header.banner {
+.p-0, section.all > div, header.banner {
   padding: 0 !important;
 }
 
@@ -8476,7 +8476,7 @@ section.news > div > div > a > div > img {
   color: var(--bs-dark-text) !important;
 }
 
-.bg-primary {
+.bg-primary, section.regates > div div.card-regates div:last-child > h3, section.regates > div div.card-regates div:last-child > .h3 {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -8486,7 +8486,7 @@ section.news > div > div > a > div > img {
   background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-success {
+.bg-success, section.test > div div.test-one div.one {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -8496,7 +8496,7 @@ section.news > div > div > a > div > img {
   background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-warning {
+.bg-warning, section.test > div div.test-one div.two {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-warning-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -9476,7 +9476,7 @@ section.news > div > div > a > div > img {
   .flex-md-fill {
     flex: 1 1 auto !important;
   }
-  .flex-md-row, section.regates > div > div {
+  .flex-md-row, section.test > div div.test-one, section.regates > div div.card-regates {
     flex-direction: row !important;
   }
   .flex-md-column {
@@ -11652,7 +11652,7 @@ section.news > div > div > a > div > img {
     display: none !important;
   }
 }
-.bg-primary {
+.bg-primary, section.regates > div div.card-regates div:last-child > h3, section.regates > div div.card-regates div:last-child > .h3 {
   background-color: #0d6efd;
 }
 
@@ -11660,7 +11660,7 @@ section.news > div > div > a > div > img {
   background-color: #6c757d;
 }
 
-.bg-success {
+.bg-success, section.test > div div.test-one div.one {
   background-color: #198754;
 }
 
@@ -11668,7 +11668,7 @@ section.news > div > div > a > div > img {
   background-color: #0dcaf0;
 }
 
-.bg-warning {
+.bg-warning, section.test > div div.test-one div.two {
   background-color: #ffc107;
 }
 
@@ -11794,6 +11794,9 @@ section.news > div > div > a > div > div {
 section.news > a {
   width: 90%;
   height: 50px;
+}
+section.test > div div.test-one div.one {
+  min-width: 40%;
 }
 section.promo > div > div {
   min-height: 20vw;
