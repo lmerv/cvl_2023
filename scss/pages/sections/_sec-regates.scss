@@ -3,29 +3,35 @@
 // 
 section.regates {
   @extend .container;
-
-  > div {
-    @extend .row;
-    > div {
-      @extend .row;
-      width:100%;
-      > figure {
-        @extend .col-12, .col-md-5, .m-0, .p-0;
-        min-height: 250px;
-        > img {
-          @extend  .object-fit-none, .m-0;
-          min-height: 100%;
-        }
-      }
-      > div.card-body {
-        @extend .col-12, .col-md-7;
-        @include card-body-all;
-        @extend .ps-2, .pt-2, .pe-0;
-        > a {
-          @extend .btn, .btn-outline-primary, .btn-lg, .my-2;
-        }
-      }
+  > header {
+    @extend .border-primary-subtle;
     }
+  > div {
+    // @extend .row;
+    min-height: 15vw;
+    @extend .my-5, .p-0;
+    >&:hover {
+      @extend .shadow;
+    }
+    > div:first-child {
+      @extend .col-sm-4, .p-0;
+        > img {
+        @extend .img-fluid, .object-fit-cover;
+        min-height: 100%;
+        }
+      }
+    > div:last-child {
+      @extend .col-sm-8, .ps-md-5, .d-flex, .flex-wrap, .justify-content-start;
+      > h3 {
+        @extend .fw-light, .my-2, .pt-2;
+      }
+      > div {
+        @extend .lh-lg, .pb-2;
+      }
+      > a {
+        @extend .btn, .btn-primary, .align-bottom, .rounded-0, .w-50, .my-auto, .mx-auto, .p-2;
+      }
 
+    }
   }
 }
