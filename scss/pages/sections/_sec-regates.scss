@@ -10,8 +10,10 @@ section.regates {
     // @extend .row;
     min-height: 15vw;
     @extend .my-5, .p-0;
-    >&:hover {
-      @extend .shadow;
+    > &:hover {
+       img {
+        filter: blur(0.1rem);
+      }
     }
     > div:first-child {
       @extend .col-sm-4, .p-0;
@@ -29,7 +31,10 @@ section.regates {
         @extend .lh-lg, .pb-2;
       }
       > a {
-        @extend .btn, .btn-primary, .align-bottom, .rounded-0, .w-50, .my-auto, .mx-auto, .p-2;
+        @extend .btn, .btn-primary, .align-bottom, .rounded-0, .w-100, .my-auto, .mx-auto, .p-2;
+        @include media-breakpoint-up(lg) { 
+          width: 50% !important;
+        }
       }
 
     }

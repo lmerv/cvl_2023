@@ -10,6 +10,7 @@
 //  VARIABLES : MIXINS & EXTEND BOOTSTRAP
 @import 'variables/mes-variables';
 @import 'variables/diagonal-container';
+@import 'variables/mixins';
 // 
 //  PERSONNALISATION
 // 
@@ -19,6 +20,7 @@
 @import 'templates/nav';
 @import 'templates/banner';
 @import 'templates/footeer';
-@import 'pages/frontpage';
+@import 'pages/front-page';      // frontpage.php : body class = home / 
+@import 'pages/page';           // index.php : body class = page / 
 
 

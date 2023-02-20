@@ -1,0 +1,57 @@
+//  Section Header
+@mixin header-all {
+    > header {
+        @extend .row;
+        @extend .align-items-end;
+        @extend .border-bottom, .border-3;
+        @extend .m-2, .m-md-0;      
+        > h2 {
+          @extend .col;
+          @extend .align-self-start;
+          @extend .h1, .fw-light, .fst-italic;
+        }
+        > p {
+          @extend .col;
+          @extend .d-none;
+          @extend .d-md-block;
+          @extend .align-self-end;
+          @extend .text-end;
+          @extend .m-0;
+          > a {
+            @extend .h4, .fw-light, .fst-italic;
+            @extend .text-muted;
+            @extend .text-decoration-none;
+          }
+        }
+    
+      }
+}
+// 
+//  Cards
+// 
+@mixin card-model-all {
+  @extend .card, .rounded-0, .text-reset, .lh-lg;
+    >&:hover {
+      @extend .shadow;
+    }
+}
+@mixin card-body-all {
+  > img {
+    @extend .card-img-top;
+    @extend .rounded-0;
+    object-fit: cover;
+    min-height: 15vw;
+  }
+  > div {
+    @extend .card-body;
+    min-height: 10vw;
+    > h3 {
+      @extend .pt-2;
+    }
+  }
+  > p {
+    @extend .card-footer;
+    @extend .text-muted;
+    @extend .m-0;
+  }
+}

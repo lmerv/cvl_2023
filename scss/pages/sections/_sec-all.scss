@@ -4,31 +4,7 @@
 section.all {
   @extend .ps-0;
   @extend .mt-2, .mt-md-4;
-  > header {
-    @extend .row;
-    @extend .align-items-end;
-    @extend .border-bottom, .border-3;
-    @extend .m-2, .m-md-0;      
-    > h2 {
-      @extend .col;
-      @extend .align-self-start;
-      @extend .h1, .fw-light, .fst-italic;
-    }
-    > p {
-      @extend .col;
-      @extend .d-none;
-      @extend .d-md-block;
-      @extend .align-self-end;
-      @extend .text-end;
-      @extend .m-0;
-      > a {
-        @extend .h4, .fw-light, .fst-italic;
-        @extend .text-muted;
-        @extend .text-decoration-none;
-      }
-    }
-
-  }
+  @include header-all;
   > div {
     @extend .p-0;
     @extend .m-0;

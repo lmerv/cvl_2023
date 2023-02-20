@@ -216,7 +216,7 @@ hr {
   opacity: 0.25;
 }
 
-h6, .h6, h5, .h5, h4, .h4, section.all > header > p > a, h3, .h3, h2, .h2, h1, .h1, section.all > header > h2, section.all > header > .h2 {
+h6, .h6, h5, .h5, h4, .h4, body.page section > header > p > a, body.home section.all > header > p > a, h3, .h3, h2, .h2, h1, .h1, body.page section > header > h2, body.page section > header > .h2, body.home section.all > header > h2, body.home section.all > header > .h2 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -224,11 +224,11 @@ h6, .h6, h5, .h5, h4, .h4, section.all > header > p > a, h3, .h3, h2, .h2, h1, .
   color: var(--bs-heading-color, inherit);
 }
 
-h1, .h1, section.all > header > h2, section.all > header > .h2 {
+h1, .h1, body.page section > header > h2, body.page section > header > .h2, body.home section.all > header > h2, body.home section.all > header > .h2 {
   font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
-  h1, .h1, section.all > header > h2, section.all > header > .h2 {
+  h1, .h1, body.page section > header > h2, body.page section > header > .h2, body.home section.all > header > h2, body.home section.all > header > .h2 {
     font-size: 2.5rem;
   }
 }
@@ -251,11 +251,11 @@ h3, .h3 {
   }
 }
 
-h4, .h4, section.all > header > p > a {
+h4, .h4, body.page section > header > p > a, body.home section.all > header > p > a {
   font-size: calc(1.275rem + 0.3vw);
 }
 @media (min-width: 1200px) {
-  h4, .h4, section.all > header > p > a {
+  h4, .h4, body.page section > header > p > a, body.home section.all > header > p > a {
     font-size: 1.5rem;
   }
 }
@@ -700,7 +700,7 @@ progress {
   content: "— ";
 }
 
-.img-fluid, section.regates > div > div:first-child > img, header.banner > figure > img {
+.img-fluid, body.home section.regates > div > div:first-child > img, header.banner > figure > img {
   max-width: 100%;
   height: auto;
 }
@@ -728,7 +728,7 @@ progress {
   color: var(--bs-secondary-color);
 }
 
-.container, section.cust > div, section.regates, section.news,
+.container, body.page section, body.home section.cust > div, body.home section.regates, body.home section.news, footer > div.footer-info > div,
 .container-fluid,
 footer,
 header.banner,
@@ -747,31 +747,31 @@ header.banner,
 }
 
 @media (min-width: 576px) {
-  .container-sm, .container, section.cust > div, section.regates, section.news {
+  .container-sm, .container, body.page section, body.home section.cust > div, body.home section.regates, body.home section.news, footer > div.footer-info > div {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container-md, .container-sm, .container, section.cust > div, section.regates, section.news {
+  .container-md, .container-sm, .container, body.page section, body.home section.cust > div, body.home section.regates, body.home section.news, footer > div.footer-info > div {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container-lg, .container-md, .container-sm, .container, section.cust > div, section.regates, section.news {
+  .container-lg, .container-md, .container-sm, .container, body.page section, body.home section.cust > div, body.home section.regates, body.home section.news, footer > div.footer-info > div {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container, section.cust > div, section.regates, section.news {
+  .container-xl, .container-lg, .container-md, .container-sm, .container, body.page section, body.home section.cust > div, body.home section.regates, body.home section.news, footer > div.footer-info > div {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, section.cust > div, section.regates, section.news {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, body.page section, body.home section.cust > div, body.home section.regates, body.home section.news, footer > div.footer-info > div {
     max-width: 1320px;
   }
 }
-.row, section.news > div, section.all > header {
+.row, body.page section > header, body.home section.news > div, body.home section.all > header {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
@@ -780,7 +780,7 @@ header.banner,
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
-.row > *, section.news > div > *, section.all > header > * {
+.row > *, body.page section > header > *, body.home section.news > div > *, body.home section.all > header > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -789,7 +789,7 @@ header.banner,
   margin-top: var(--bs-gutter-y);
 }
 
-.col, section.all > header > p, section.all > header > h2, section.all > header > .h2 {
+.col, body.page section > header > p, body.page section > header > h2, body.page section > header > .h2, body.home section.all > header > p, body.home section.all > header > h2, body.home section.all > header > .h2 {
   flex: 1 0 0%;
 }
 
@@ -888,7 +888,7 @@ header.banner,
   width: 91.66666667%;
 }
 
-.col-12, section.news > div > div.sticky {
+.col-12, body.home section.news > div > div.sticky {
   flex: 0 0 auto;
   width: 100%;
 }
@@ -1045,7 +1045,7 @@ header.banner,
     flex: 0 0 auto;
     width: 25%;
   }
-  .col-sm-4, section.regates > div > div:first-child {
+  .col-sm-4, body.home section.regates > div > div:first-child {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
@@ -1061,7 +1061,7 @@ header.banner,
     flex: 0 0 auto;
     width: 58.33333333%;
   }
-  .col-sm-8, section.regates > div > div:last-child {
+  .col-sm-8, body.home section.regates > div > div:last-child {
     flex: 0 0 auto;
     width: 66.66666667%;
   }
@@ -1222,7 +1222,7 @@ header.banner,
     flex: 0 0 auto;
     width: 41.66666667%;
   }
-  .col-md-6, section.news > div > div.sticky, section.news > div > div {
+  .col-md-6, body.home section.news > div > div.sticky, body.home section.news > div > div {
     flex: 0 0 auto;
     width: 50%;
   }
@@ -1383,7 +1383,7 @@ header.banner,
     flex: 0 0 auto;
     width: 25%;
   }
-  .col-lg-4, section.news > div > div {
+  .col-lg-4, body.home section.news > div > div {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
@@ -1415,7 +1415,7 @@ header.banner,
     flex: 0 0 auto;
     width: 91.66666667%;
   }
-  .col-lg-12, section.news > div > div.sticky {
+  .col-lg-12, body.home section.news > div > div.sticky {
     flex: 0 0 auto;
     width: 100%;
   }
@@ -2422,7 +2422,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, section.regates > div > div:last-child > .btn-check[disabled] + a, section.news > .btn-check[disabled] + a, .btn-check:disabled + .btn, section.regates > div > div:last-child > .btn-check:disabled + a, section.news > .btn-check:disabled + a {
+.btn-check[disabled] + .btn, body.home section.regates > div > div:last-child > .btn-check[disabled] + a, body.home section.news > .btn-check[disabled] + a, .btn-check:disabled + .btn, body.home section.regates > div > div:last-child > .btn-check:disabled + a, body.home section.news > .btn-check:disabled + a {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2615,11 +2615,11 @@ textarea.form-control-lg {
 .input-group > .form-floating:focus-within {
   z-index: 5;
 }
-.input-group .btn, .input-group section.regates > div > div:last-child > a, .input-group section.news > a {
+.input-group .btn, .input-group body.home section.regates > div > div:last-child > a, body.home .input-group section.regates > div > div:last-child > a, .input-group body.home section.news > a, body.home .input-group section.news > a {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group section.regates > div > div:last-child > a:focus, .input-group section.news > a:focus {
+.input-group .btn:focus, .input-group body.home section.regates > div > div:last-child > a:focus, body.home .input-group section.regates > div > div:last-child > a:focus, .input-group body.home section.news > a:focus, body.home .input-group section.news > a:focus {
   z-index: 5;
 }
 
@@ -2642,8 +2642,8 @@ textarea.form-control-lg {
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
-section.regates > div > div.input-group-lg:last-child > a,
-section.news.input-group-lg > a {
+body.home section.regates > div > div.input-group-lg:last-child > a,
+body.home section.news.input-group-lg > a {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.5rem;
@@ -2653,8 +2653,8 @@ section.news.input-group-lg > a {
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
-section.regates > div > div.input-group-sm:last-child > a,
-section.news.input-group-sm > a {
+body.home section.regates > div > div.input-group-sm:last-child > a,
+body.home section.news.input-group-sm > a {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.25rem;
@@ -2870,7 +2870,7 @@ section.news.input-group-sm > a {
   z-index: 4;
 }
 
-.btn, section.regates > div > div:last-child > a, section.news > a {
+.btn, body.home section.regates > div > div:last-child > a, body.home section.news > a {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -2904,41 +2904,41 @@ section.news.input-group-sm > a {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, section.regates > div > div:last-child > a, section.news > a {
+  .btn, body.home section.regates > div > div:last-child > a, body.home section.news > a {
     transition: none;
   }
 }
-.btn:hover, section.regates > div > div:last-child > a:hover, section.news > a:hover {
+.btn:hover, body.home section.regates > div > div:last-child > a:hover, body.home section.news > a:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
-.btn-check + .btn:hover, section.regates > div > div:last-child > .btn-check + a:hover, section.news > .btn-check + a:hover {
+.btn-check + .btn:hover, body.home section.regates > div > div:last-child > .btn-check + a:hover, body.home section.news > .btn-check + a:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
   border-color: var(--bs-btn-border-color);
 }
-.btn:focus-visible, section.regates > div > div:last-child > a:focus-visible, section.news > a:focus-visible {
+.btn:focus-visible, body.home section.regates > div > div:last-child > a:focus-visible, body.home section.news > a:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:focus-visible + .btn, section.regates > div > div:last-child > .btn-check:focus-visible + a, section.news > .btn-check:focus-visible + a {
+.btn-check:focus-visible + .btn, body.home section.regates > div > div:last-child > .btn-check:focus-visible + a, body.home section.news > .btn-check:focus-visible + a {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, section.regates > div > div:last-child > .btn-check:checked + a, section.news > .btn-check:checked + a, :not(.btn-check) + .btn:active, section.regates > div > div:last-child > :not(.btn-check) + a:active, section.news > :not(.btn-check) + a:active, .btn:first-child:active, section.regates > div > div:last-child > a:first-child:active, section.news > a:first-child:active, .btn.active, section.regates > div > div:last-child > a.active, section.news > a.active, .btn.show, section.regates > div > div:last-child > a.show, section.news > a.show {
+.btn-check:checked + .btn, body.home section.regates > div > div:last-child > .btn-check:checked + a, body.home section.news > .btn-check:checked + a, :not(.btn-check) + .btn:active, body.home section.regates > div > div:last-child > :not(.btn-check) + a:active, body.home section.news > :not(.btn-check) + a:active, .btn:first-child:active, body.home section.regates > div > div:last-child > a:first-child:active, body.home section.news > a:first-child:active, .btn.active, body.home section.regates > div > div:last-child > a.active, body.home section.news > a.active, .btn.show, body.home section.regates > div > div:last-child > a.show, body.home section.news > a.show {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, section.regates > div > div:last-child > .btn-check:checked + a:focus-visible, section.news > .btn-check:checked + a:focus-visible, :not(.btn-check) + .btn:active:focus-visible, section.regates > div > div:last-child > :not(.btn-check) + a:active:focus-visible, section.news > :not(.btn-check) + a:active:focus-visible, .btn:first-child:active:focus-visible, section.regates > div > div:last-child > a:first-child:active:focus-visible, section.news > a:first-child:active:focus-visible, .btn.active:focus-visible, section.regates > div > div:last-child > a.active:focus-visible, section.news > a.active:focus-visible, .btn.show:focus-visible, section.regates > div > div:last-child > a.show:focus-visible, section.news > a.show:focus-visible {
+.btn-check:checked + .btn:focus-visible, body.home section.regates > div > div:last-child > .btn-check:checked + a:focus-visible, body.home section.news > .btn-check:checked + a:focus-visible, :not(.btn-check) + .btn:active:focus-visible, body.home section.regates > div > div:last-child > :not(.btn-check) + a:active:focus-visible, body.home section.news > :not(.btn-check) + a:active:focus-visible, .btn:first-child:active:focus-visible, body.home section.regates > div > div:last-child > a:first-child:active:focus-visible, body.home section.news > a:first-child:active:focus-visible, .btn.active:focus-visible, body.home section.regates > div > div:last-child > a.active:focus-visible, body.home section.news > a.active:focus-visible, .btn.show:focus-visible, body.home section.regates > div > div:last-child > a.show:focus-visible, body.home section.news > a.show:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn:disabled, section.regates > div > div:last-child > a:disabled, section.news > a:disabled, .btn.disabled, section.regates > div > div:last-child > a.disabled, section.news > a.disabled, fieldset:disabled .btn, fieldset:disabled section.regates > div > div:last-child > a, fieldset:disabled section.news > a {
+.btn:disabled, body.home section.regates > div > div:last-child > a:disabled, body.home section.news > a:disabled, .btn.disabled, body.home section.regates > div > div:last-child > a.disabled, body.home section.news > a.disabled, fieldset:disabled .btn, fieldset:disabled body.home section.regates > div > div:last-child > a, body.home fieldset:disabled section.regates > div > div:last-child > a, fieldset:disabled body.home section.news > a, body.home fieldset:disabled section.news > a {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -2946,7 +2946,7 @@ section.news.input-group-sm > a {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
-.btn-primary, section.regates > div > div:last-child > a {
+.btn-primary, body.home section.regates > div > div:last-child > a {
   --bs-btn-color: #fff;
   --bs-btn-bg: #0d6efd;
   --bs-btn-border-color: #0d6efd;
@@ -3048,7 +3048,7 @@ section.news.input-group-sm > a {
   --bs-btn-disabled-border-color: #dc3545;
 }
 
-.btn-light, section.news > a {
+.btn-light, body.home section.news > a {
   --bs-btn-color: #000;
   --bs-btn-bg: #f8f9fa;
   --bs-btn-border-color: #f8f9fa;
@@ -3240,14 +3240,14 @@ section.news.input-group-sm > a {
   color: var(--bs-btn-hover-color);
 }
 
-.btn-lg, section.news > a, .btn-group-lg > .btn, section.regates > div > div.btn-group-lg:last-child > a, section.news.btn-group-lg > a {
+.btn-lg, body.home section.news > a, .btn-group-lg > .btn, body.home section.regates > div > div.btn-group-lg:last-child > a {
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-padding-x: 1rem;
   --bs-btn-font-size: 1.25rem;
   --bs-btn-border-radius: 0.5rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, section.regates > div > div.btn-group-sm:last-child > a, section.news.btn-group-sm > a {
+.btn-sm, .btn-group-sm > .btn, body.home section.regates > div > div.btn-group-sm:last-child > a, body.home section.news.btn-group-sm > a {
   --bs-btn-padding-y: 0.25rem;
   --bs-btn-padding-x: 0.5rem;
   --bs-btn-font-size: 0.875rem;
@@ -3614,47 +3614,47 @@ section.news.input-group-sm > a {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, section.regates > div > div.btn-group:last-child > a, section.news.btn-group > a,
+.btn-group > .btn, body.home section.regates > div > div.btn-group:last-child > a, body.home section.news.btn-group > a,
 .btn-group-vertical > .btn,
-section.regates > div > div.btn-group-vertical:last-child > a,
-section.news.btn-group-vertical > a {
+body.home section.regates > div > div.btn-group-vertical:last-child > a,
+body.home section.news.btn-group-vertical > a {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, section.regates > div > div.btn-group:last-child > .btn-check:checked + a, section.news.btn-group > .btn-check:checked + a,
+.btn-group > .btn-check:checked + .btn, body.home section.regates > div > div.btn-group:last-child > .btn-check:checked + a, body.home section.news.btn-group > .btn-check:checked + a,
 .btn-group > .btn-check:focus + .btn,
-section.regates > div > div.btn-group:last-child > .btn-check:focus + a,
-section.news.btn-group > .btn-check:focus + a,
+body.home section.regates > div > div.btn-group:last-child > .btn-check:focus + a,
+body.home section.news.btn-group > .btn-check:focus + a,
 .btn-group > .btn:hover,
-section.regates > div > div.btn-group:last-child > a:hover,
-section.news.btn-group > a:hover,
+body.home section.regates > div > div.btn-group:last-child > a:hover,
+body.home section.news.btn-group > a:hover,
 .btn-group > .btn:focus,
-section.regates > div > div.btn-group:last-child > a:focus,
-section.news.btn-group > a:focus,
+body.home section.regates > div > div.btn-group:last-child > a:focus,
+body.home section.news.btn-group > a:focus,
 .btn-group > .btn:active,
-section.regates > div > div.btn-group:last-child > a:active,
-section.news.btn-group > a:active,
+body.home section.regates > div > div.btn-group:last-child > a:active,
+body.home section.news.btn-group > a:active,
 .btn-group > .btn.active,
-section.regates > div > div.btn-group:last-child > a.active,
-section.news.btn-group > a.active,
+body.home section.regates > div > div.btn-group:last-child > a.active,
+body.home section.news.btn-group > a.active,
 .btn-group-vertical > .btn-check:checked + .btn,
-section.regates > div > div.btn-group-vertical:last-child > .btn-check:checked + a,
-section.news.btn-group-vertical > .btn-check:checked + a,
+body.home section.regates > div > div.btn-group-vertical:last-child > .btn-check:checked + a,
+body.home section.news.btn-group-vertical > .btn-check:checked + a,
 .btn-group-vertical > .btn-check:focus + .btn,
-section.regates > div > div.btn-group-vertical:last-child > .btn-check:focus + a,
-section.news.btn-group-vertical > .btn-check:focus + a,
+body.home section.regates > div > div.btn-group-vertical:last-child > .btn-check:focus + a,
+body.home section.news.btn-group-vertical > .btn-check:focus + a,
 .btn-group-vertical > .btn:hover,
-section.regates > div > div.btn-group-vertical:last-child > a:hover,
-section.news.btn-group-vertical > a:hover,
+body.home section.regates > div > div.btn-group-vertical:last-child > a:hover,
+body.home section.news.btn-group-vertical > a:hover,
 .btn-group-vertical > .btn:focus,
-section.regates > div > div.btn-group-vertical:last-child > a:focus,
-section.news.btn-group-vertical > a:focus,
+body.home section.regates > div > div.btn-group-vertical:last-child > a:focus,
+body.home section.news.btn-group-vertical > a:focus,
 .btn-group-vertical > .btn:active,
-section.regates > div > div.btn-group-vertical:last-child > a:active,
-section.news.btn-group-vertical > a:active,
+body.home section.regates > div > div.btn-group-vertical:last-child > a:active,
+body.home section.news.btn-group-vertical > a:active,
 .btn-group-vertical > .btn.active,
-section.regates > div > div.btn-group-vertical:last-child > a.active,
-section.news.btn-group-vertical > a.active {
+body.home section.regates > div > div.btn-group-vertical:last-child > a.active,
+body.home section.news.btn-group-vertical > a.active {
   z-index: 1;
 }
 
@@ -3670,27 +3670,27 @@ section.news.btn-group-vertical > a.active {
 .btn-group {
   border-radius: 0.375rem;
 }
-.btn-group > :not(.btn-check:first-child) + .btn, section.regates > div > div.btn-group:last-child > :not(.btn-check:first-child) + a, section.news.btn-group > :not(.btn-check:first-child) + a,
+.btn-group > :not(.btn-check:first-child) + .btn, body.home section.regates > div > div.btn-group:last-child > :not(.btn-check:first-child) + a, body.home section.news.btn-group > :not(.btn-check:first-child) + a,
 .btn-group > .btn-group:not(:first-child) {
   margin-left: calc(var(--bs-border-width) * -1);
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), section.regates > div > div.btn-group:last-child > a:not(:last-child):not(.dropdown-toggle), section.news.btn-group > a:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), body.home section.regates > div > div.btn-group:last-child > a:not(:last-child):not(.dropdown-toggle), body.home section.news.btn-group > a:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn.dropdown-toggle-split:first-child,
-section.regates > div > div.btn-group:last-child > a.dropdown-toggle-split:first-child,
-section.news.btn-group > a.dropdown-toggle-split:first-child,
+body.home section.regates > div > div.btn-group:last-child > a.dropdown-toggle-split:first-child,
+body.home section.news.btn-group > a.dropdown-toggle-split:first-child,
 .btn-group > .btn-group:not(:last-child) > .btn,
-section.regates > div.btn-group > div.btn-group:last-child:not(:last-child) > a,
-.btn-group > section.news.btn-group:not(:last-child) > a {
+body.home section.regates > div.btn-group > div.btn-group:last-child:not(:last-child) > a,
+body.home .btn-group > section.news.btn-group:not(:last-child) > a {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3), section.regates > div > div.btn-group:last-child > a:nth-child(n+3), section.news.btn-group > a:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), body.home section.regates > div > div.btn-group:last-child > a:nth-child(n+3), body.home section.news.btn-group > a:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-section.regates > div > div.btn-group:last-child > :not(.btn-check) + a,
-section.news.btn-group > :not(.btn-check) + a,
+body.home section.regates > div > div.btn-group:last-child > :not(.btn-check) + a,
+body.home section.news.btn-group > :not(.btn-check) + a,
 .btn-group > .btn-group:not(:first-child) > .btn,
-section.regates > div.btn-group > div.btn-group:last-child:not(:first-child) > a,
-.btn-group > section.news.btn-group:not(:first-child) > a {
+body.home section.regates > div.btn-group > div.btn-group:last-child:not(:first-child) > a,
+body.home .btn-group > section.news.btn-group:not(:first-child) > a {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -3706,12 +3706,12 @@ section.regates > div.btn-group > div.btn-group:last-child:not(:first-child) > a
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, section.regates > div > div.btn-group-sm:last-child > a + .dropdown-toggle-split, section.news.btn-group-sm > a + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, body.home section.regates > div > div.btn-group-sm:last-child > a + .dropdown-toggle-split, body.home section.news.btn-group-sm > a + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, section.news > a + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, section.regates > div > div.btn-group-lg:last-child > a + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, body.home section.news > a + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, body.home section.regates > div > div.btn-group-lg:last-child > a + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3721,25 +3721,25 @@ section.regates > div.btn-group > div.btn-group:last-child:not(:first-child) > a
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn, section.regates > div > div.btn-group-vertical:last-child > a, section.news.btn-group-vertical > a,
+.btn-group-vertical > .btn, body.home section.regates > div > div.btn-group-vertical:last-child > a, body.home section.news.btn-group-vertical > a,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), section.regates > div > div.btn-group-vertical:last-child > a:not(:first-child), section.news.btn-group-vertical > a:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), body.home section.regates > div > div.btn-group-vertical:last-child > a:not(:first-child), body.home section.news.btn-group-vertical > a:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: calc(var(--bs-border-width) * -1);
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), section.regates > div > div.btn-group-vertical:last-child > a:not(:last-child):not(.dropdown-toggle), section.news.btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), body.home section.regates > div > div.btn-group-vertical:last-child > a:not(:last-child):not(.dropdown-toggle), body.home section.news.btn-group-vertical > a:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-section.regates > div.btn-group-vertical > div.btn-group:last-child:not(:last-child) > a,
-.btn-group-vertical > section.news.btn-group:not(:last-child) > a {
+body.home section.regates > div.btn-group-vertical > div.btn-group:last-child:not(:last-child) > a,
+body.home .btn-group-vertical > section.news.btn-group:not(:last-child) > a {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn, section.regates > div > div.btn-group-vertical:last-child > a ~ .btn, section.regates > div > div.btn-group-vertical:last-child > .btn ~ a, section.regates > div > div.btn-group-vertical:last-child > a ~ a, section.news.btn-group-vertical > a ~ .btn, section.news.btn-group-vertical > .btn ~ a, section.news.btn-group-vertical > a ~ a,
+.btn-group-vertical > .btn ~ .btn, body.home section.regates > div > div.btn-group-vertical:last-child > a ~ .btn, body.home section.regates > div > div.btn-group-vertical:last-child > .btn ~ a, body.home section.regates > div > div.btn-group-vertical:last-child > a ~ a, body.home section.news.btn-group-vertical > a ~ .btn, body.home section.news.btn-group-vertical > .btn ~ a, body.home section.news.btn-group-vertical > a ~ a,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-section.regates > div.btn-group-vertical > div.btn-group:last-child:not(:first-child) > a,
-.btn-group-vertical > section.news.btn-group:not(:first-child) > a {
+body.home section.regates > div.btn-group-vertical > div.btn-group:last-child:not(:first-child) > a,
+body.home .btn-group-vertical > section.news.btn-group:not(:first-child) > a {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -3893,7 +3893,7 @@ section.regates > div.btn-group-vertical > div.btn-group:last-child:not(:first-c
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
-.navbar > .container, section.cust.navbar > div, .navbar > section.regates, .navbar > section.news,
+.navbar > .container, body.page .navbar > section, body.home section.cust.navbar > div, body.home .navbar > section.regates, body.home .navbar > section.news, footer > div.footer-info.navbar > div,
 .navbar > .container-fluid,
 .navbar > footer,
 .navbar > header.banner,
@@ -4294,7 +4294,7 @@ section.regates > div.btn-group-vertical > div.btn-group:last-child:not(:first-c
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.card, section.news > div > div > a > div {
+.card, body.home section.news > div > div > a > div {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 0.5rem;
@@ -4325,32 +4325,32 @@ section.regates > div.btn-group-vertical > div.btn-group:last-child:not(:first-c
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
 }
-.card > hr, section.news > div > div > a > div > hr {
+.card > hr, body.home section.news > div > div > a > div > hr {
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group, section.news > div > div > a > div > .list-group {
+.card > .list-group, body.home section.news > div > div > a > div > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.card > .list-group:first-child, section.news > div > div > a > div > .list-group:first-child {
+.card > .list-group:first-child, body.home section.news > div > div > a > div > .list-group:first-child {
   border-top-width: 0;
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
-.card > .list-group:last-child, section.news > div > div > a > div > .list-group:last-child {
+.card > .list-group:last-child, body.home section.news > div > div > a > div > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: var(--bs-card-inner-border-radius);
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
-.card > .card-header + .list-group, section.news > div > div > a > div > .card-header + .list-group,
+.card > .card-header + .list-group, body.home section.news > div > div > a > div > .card-header + .list-group,
 .card > .list-group + .card-footer,
-section.news > div > div > a > div > .list-group + .card-footer,
-section.news > div > div > a > div > .list-group + p {
+body.home section.news > div > div > a > div > .list-group + .card-footer,
+body.home section.news > div > div > a > div > .list-group + p {
   border-top: 0;
 }
 
-.card-body, section.news > div > div > a > div > div {
+.card-body, body.home section.news > div > div > a > div > div {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
@@ -4386,13 +4386,13 @@ section.news > div > div > a > div > .list-group + p {
   border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
 }
 
-.card-footer, section.news > div > div > a > div > p {
+.card-footer, body.home section.news > div > div > a > div > p {
   padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
   color: var(--bs-card-cap-color);
   background-color: var(--bs-card-cap-bg);
   border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);
 }
-.card-footer:last-child, section.news > div > div > a > div > p:last-child {
+.card-footer:last-child, body.home section.news > div > div > a > div > p:last-child {
   border-radius: 0 0 var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius);
 }
 
@@ -4424,14 +4424,14 @@ section.news > div > div > a > div > .list-group + p {
 
 .card-img,
 .card-img-top,
-section.news > div > div > a > div > img,
+body.home section.news > div > div > a > div > img,
 .card-img-bottom {
   width: 100%;
 }
 
 .card-img,
 .card-img-top,
-section.news > div > div > a > div > img {
+body.home section.news > div > div > a > div > img {
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
@@ -4442,7 +4442,7 @@ section.news > div > div > a > div > img {
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
 
-.card-group > .card, section.news > div > div > a.card-group > div {
+.card-group > .card, body.home section.news > div > div > a.card-group > div {
   margin-bottom: var(--bs-card-group-margin);
 }
 @media (min-width: 576px) {
@@ -4450,44 +4450,46 @@ section.news > div > div > a > div > img {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card, section.news > div > div > a.card-group > div {
+  .card-group > .card, body.home section.news > div > div > a.card-group > div {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card, section.news > div > div > a.card-group > div + .card, section.news > div > div > a.card-group > .card + div, section.news > div > div > a.card-group > div + div {
+  .card-group > .card + .card, body.home section.news > div > div > a.card-group > div + .card, body.home section.news > div > div > a.card-group > .card + div, body.home section.news > div > div > a.card-group > div + div {
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:not(:last-child), section.news > div > div > a.card-group > div:not(:last-child) {
+  .card-group > .card:not(:last-child), body.home section.news > div > div > a.card-group > div:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top, .card-group > .card:not(:last-child) section.news > div > div > a > div > img, section.news > div > div > a.card-group > div:not(:last-child) .card-img-top, section.news > div > div > a.card-group > div:not(:last-child) section.news > div > div > a > div > img,
+  .card-group > .card:not(:last-child) .card-img-top, .card-group > .card:not(:last-child) body.home section.news > div > div > a > div > img, body.home .card-group > .card:not(:last-child) section.news > div > div > a > div > img, body.home section.news > div > div > a.card-group > div:not(:last-child) .card-img-top, body.home section.news > div > div > a.card-group > div:not(:last-child) section.news > div > div > a > div > img,
   .card-group > .card:not(:last-child) .card-header,
-  section.news > div > div > a.card-group > div:not(:last-child) .card-header {
+  body.home section.news > div > div > a.card-group > div:not(:last-child) .card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom, section.news > div > div > a.card-group > div:not(:last-child) .card-img-bottom,
+  .card-group > .card:not(:last-child) .card-img-bottom, body.home section.news > div > div > a.card-group > div:not(:last-child) .card-img-bottom,
   .card-group > .card:not(:last-child) .card-footer,
-  .card-group > .card:not(:last-child) section.news > div > div > a > div > p,
-  section.news > div > div > a.card-group > div:not(:last-child) .card-footer,
-  section.news > div > div > a.card-group > div:not(:last-child) section.news > div > div > a > div > p {
+  .card-group > .card:not(:last-child) body.home section.news > div > div > a > div > p,
+  body.home .card-group > .card:not(:last-child) section.news > div > div > a > div > p,
+  body.home section.news > div > div > a.card-group > div:not(:last-child) .card-footer,
+  body.home section.news > div > div > a.card-group > div:not(:last-child) section.news > div > div > a > div > p {
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:first-child), section.news > div > div > a.card-group > div:not(:first-child) {
+  .card-group > .card:not(:first-child), body.home section.news > div > div > a.card-group > div:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top, .card-group > .card:not(:first-child) section.news > div > div > a > div > img, section.news > div > div > a.card-group > div:not(:first-child) .card-img-top, section.news > div > div > a.card-group > div:not(:first-child) section.news > div > div > a > div > img,
+  .card-group > .card:not(:first-child) .card-img-top, .card-group > .card:not(:first-child) body.home section.news > div > div > a > div > img, body.home .card-group > .card:not(:first-child) section.news > div > div > a > div > img, body.home section.news > div > div > a.card-group > div:not(:first-child) .card-img-top, body.home section.news > div > div > a.card-group > div:not(:first-child) section.news > div > div > a > div > img,
   .card-group > .card:not(:first-child) .card-header,
-  section.news > div > div > a.card-group > div:not(:first-child) .card-header {
+  body.home section.news > div > div > a.card-group > div:not(:first-child) .card-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom, section.news > div > div > a.card-group > div:not(:first-child) .card-img-bottom,
+  .card-group > .card:not(:first-child) .card-img-bottom, body.home section.news > div > div > a.card-group > div:not(:first-child) .card-img-bottom,
   .card-group > .card:not(:first-child) .card-footer,
-  .card-group > .card:not(:first-child) section.news > div > div > a > div > p,
-  section.news > div > div > a.card-group > div:not(:first-child) .card-footer,
-  section.news > div > div > a.card-group > div:not(:first-child) section.news > div > div > a > div > p {
+  .card-group > .card:not(:first-child) body.home section.news > div > div > a > div > p,
+  body.home .card-group > .card:not(:first-child) section.news > div > div > a > div > p,
+  body.home section.news > div > div > a.card-group > div:not(:first-child) .card-footer,
+  body.home section.news > div > div > a.card-group > div:not(:first-child) section.news > div > div > a > div > p {
     border-bottom-left-radius: 0;
   }
 }
@@ -4780,7 +4782,7 @@ section.news > div > div > a > div > img {
   display: none;
 }
 
-.btn .badge, section.regates > div > div:last-child > a .badge, section.news > a .badge {
+.btn .badge, body.home section.regates > div > div:last-child > a .badge, body.home section.news > a .badge {
   position: relative;
   top: -1px;
 }
@@ -6799,7 +6801,7 @@ section.news > div > div > a > div > img {
   background-color: currentcolor;
   opacity: 0.5;
 }
-.placeholder.btn::before, section.regates > div > div:last-child > a.placeholder::before, section.news > a.placeholder::before {
+.placeholder.btn::before, body.home section.regates > div > div:last-child > a.placeholder::before, body.home section.news > a.placeholder::before {
   display: inline-block;
   content: "";
 }
@@ -6924,10 +6926,10 @@ section.news > div > div > a > div > img {
   color: #b02a37 !important;
 }
 
-.link-light, footer > div.footer-page p, .offcanvas-title {
+.link-light, footer > div.footer-info__copyright p, .offcanvas-title {
   color: #f8f9fa !important;
 }
-.link-light:hover, footer > div.footer-page p:hover, .offcanvas-title:hover, .link-light:focus, footer > div.footer-page p:focus, .offcanvas-title:focus {
+.link-light:hover, footer > div.footer-info__copyright p:hover, .offcanvas-title:hover, .link-light:focus, footer > div.footer-info__copyright p:focus, .offcanvas-title:focus {
   color: #f9fafb !important;
 }
 
@@ -7123,7 +7125,7 @@ section.news > div > div > a > div > img {
   vertical-align: middle !important;
 }
 
-.align-bottom, section.regates > div > div:last-child > a {
+.align-bottom, body.home section.regates > div > div:last-child > a {
   vertical-align: bottom !important;
 }
 
@@ -7151,7 +7153,7 @@ section.news > div > div > a > div > img {
   object-fit: contain !important;
 }
 
-.object-fit-cover, section.regates > div > div:first-child > img {
+.object-fit-cover, body.home section.regates > div > div:first-child > img, header.banner > figure > img {
   object-fit: cover !important;
 }
 
@@ -7243,7 +7245,7 @@ section.news > div > div > a > div > img {
   display: inline-block !important;
 }
 
-.d-block, section.news > a, footer > div.footer-page {
+.d-block, body.home section.news > a, footer > div.footer-info__copyright {
   display: block !important;
 }
 
@@ -7263,7 +7265,7 @@ section.news > div > div > a > div > img {
   display: table-cell !important;
 }
 
-.d-flex, section.cust > div > div, section.regates > div > div:last-child {
+.d-flex, body.home section.cust > div > div, body.home section.regates > div > div:last-child, footer > div.footer-info > div {
   display: flex !important;
 }
 
@@ -7271,11 +7273,11 @@ section.news > div > div > a > div > img {
   display: inline-flex !important;
 }
 
-.d-none, section.all > header > p {
+.d-none, body.page section > header > p, body.home section.all > header > p {
   display: none !important;
 }
 
-.shadow, section.regates > div:hover, section.news > div > div > a > div:hover, header.banner, nav.navbar {
+.shadow, body.home section.news > div > div > a > div:hover, header.banner, nav.navbar {
   box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
 }
 
@@ -7379,7 +7381,7 @@ section.news > div > div > a > div > img {
   border: 0 !important;
 }
 
-.border-top, footer {
+.border-top, footer > div.footer-info__copyright {
   border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
@@ -7395,7 +7397,7 @@ section.news > div > div > a > div > img {
   border-right: 0 !important;
 }
 
-.border-bottom, section.all > header {
+.border-bottom, body.page section > header, body.home section.all > header {
   border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
@@ -7411,7 +7413,7 @@ section.news > div > div > a > div > img {
   border-left: 0 !important;
 }
 
-.border-primary {
+.border-primary, footer > div.footer-info__copyright {
   --bs-border-opacity: 1;
   border-color: rgba(var(--bs-primary-rgb), var(--bs-border-opacity)) !important;
 }
@@ -7456,7 +7458,7 @@ section.news > div > div > a > div > img {
   border-color: rgba(var(--bs-white-rgb), var(--bs-border-opacity)) !important;
 }
 
-.border-primary-subtle, section.regates > header, footer {
+.border-primary-subtle, body.home section.regates > header {
   border-color: var(--bs-primary-border-subtle) !important;
 }
 
@@ -7472,7 +7474,7 @@ section.news > div > div > a > div > img {
   border-color: var(--bs-info-border-subtle) !important;
 }
 
-.border-warning-subtle, section.news > header {
+.border-warning-subtle, body.page section > header, body.home section.news > header {
   border-color: var(--bs-warning-border-subtle) !important;
 }
 
@@ -7496,7 +7498,7 @@ section.news > div > div > a > div > img {
   --bs-border-width: 2px;
 }
 
-.border-3, section.all > header {
+.border-3, body.page section > header, body.home section.all > header {
   --bs-border-width: 3px;
 }
 
@@ -7504,7 +7506,7 @@ section.news > div > div > a > div > img {
   --bs-border-width: 4px;
 }
 
-.border-5, footer {
+.border-5, footer > div.footer-info__copyright {
   --bs-border-width: 5px;
 }
 
@@ -7532,7 +7534,7 @@ section.news > div > div > a > div > img {
   width: 25% !important;
 }
 
-.w-50, section.regates > div > div:last-child > a {
+.w-50 {
   width: 50% !important;
 }
 
@@ -7540,7 +7542,7 @@ section.news > div > div > a > div > img {
   width: 75% !important;
 }
 
-.w-100 {
+.w-100, body.home section.regates > div > div:last-child > a {
   width: 100% !important;
 }
 
@@ -7628,7 +7630,7 @@ section.news > div > div > a > div > img {
   flex-shrink: 1 !important;
 }
 
-.flex-wrap, section.regates > div > div:last-child {
+.flex-wrap, body.home section.regates > div > div:last-child {
   flex-wrap: wrap !important;
 }
 
@@ -7640,7 +7642,7 @@ section.news > div > div > a > div > img {
   flex-wrap: wrap-reverse !important;
 }
 
-.justify-content-start, section.regates > div > div:last-child {
+.justify-content-start, body.home section.regates > div > div:last-child {
   justify-content: flex-start !important;
 }
 
@@ -7668,11 +7670,11 @@ section.news > div > div > a > div > img {
   align-items: flex-start !important;
 }
 
-.align-items-end, section.all > header {
+.align-items-end, body.page section > header, body.home section.all > header {
   align-items: flex-end !important;
 }
 
-.align-items-center, section.cust > div > div, footer > div.footer-page {
+.align-items-center, body.home section.cust > div > div, footer > div.footer-info__copyright, footer > div.footer-info > div {
   align-items: center !important;
 }
 
@@ -7712,11 +7714,11 @@ section.news > div > div > a > div > img {
   align-self: auto !important;
 }
 
-.align-self-start, section.all > header > h2, section.all > header > .h2 {
+.align-self-start, body.page section > header > h2, body.page section > header > .h2, body.home section.all > header > h2, body.home section.all > header > .h2 {
   align-self: flex-start !important;
 }
 
-.align-self-end, section.all > header > p {
+.align-self-end, body.page section > header > p, body.home section.all > header > p {
   align-self: flex-end !important;
 }
 
@@ -7764,7 +7766,7 @@ section.news > div > div > a > div > img {
   order: 6 !important;
 }
 
-.m-0, section.news > div > div > a > div > p, section.all > div, section.all > header > p {
+.m-0, body.page section > header > p, body.home section.news > div > div > a > div > p, body.home section.all > div, body.home section.all > header > p, footer {
   margin: 0 !important;
 }
 
@@ -7772,7 +7774,7 @@ section.news > div > div > a > div > img {
   margin: 0.25rem !important;
 }
 
-.m-2, section.all > header {
+.m-2, body.page section > header, body.home section.all > header {
   margin: 0.5rem !important;
 }
 
@@ -7822,7 +7824,7 @@ section.news > div > div > a > div > img {
   margin-left: 3rem !important;
 }
 
-.mx-auto, section.cust > div, section.regates > div > div:last-child > a, section.news > a {
+.mx-auto, body.home section.cust > div, body.home section.regates > div > div:last-child > a, body.home section.news > a {
   margin-right: auto !important;
   margin-left: auto !important;
 }
@@ -7837,7 +7839,7 @@ section.news > div > div > a > div > img {
   margin-bottom: 0.25rem !important;
 }
 
-.my-2, section.regates > div > div:last-child > h3, section.regates > div > div:last-child > .h3 {
+.my-2, body.home section.regates > div > div:last-child > h3, body.home section.regates > div > div:last-child > .h3 {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
 }
@@ -7852,12 +7854,12 @@ section.news > div > div > a > div > img {
   margin-bottom: 1.5rem !important;
 }
 
-.my-5, section.cust, section.regates > div {
+.my-5, body.home section.cust, body.home section.regates > div, footer > div.footer-info__copyright {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important;
 }
 
-.my-auto, section.regates > div > div:last-child > a {
+.my-auto, body.home section.regates > div > div:last-child > a {
   margin-top: auto !important;
   margin-bottom: auto !important;
 }
@@ -7870,7 +7872,7 @@ section.news > div > div > a > div > img {
   margin-top: 0.25rem !important;
 }
 
-.mt-2, section.all > div, section.all {
+.mt-2, body.page section > article, body.page section, body.home section.all > div, body.home section.all {
   margin-top: 0.5rem !important;
 }
 
@@ -7930,7 +7932,7 @@ section.news > div > div > a > div > img {
   margin-bottom: 0.5rem !important;
 }
 
-.mb-3, section.news > div > div {
+.mb-3, body.home section.news > div > div {
   margin-bottom: 1rem !important;
 }
 
@@ -7974,7 +7976,7 @@ section.news > div > div > a > div > img {
   margin-left: auto !important;
 }
 
-.p-0, section.regates > div > div:first-child, section.regates > div, section.all > div, header.banner {
+.p-0, body.home section.regates > div > div:first-child, body.home section.regates > div, body.home section.all > div, footer, header.banner {
   padding: 0 !important;
 }
 
@@ -7982,7 +7984,7 @@ section.news > div > div > a > div > img {
   padding: 0.25rem !important;
 }
 
-.p-2, section.regates > div > div:last-child > a {
+.p-2, body.home section.regates > div > div:last-child > a {
   padding: 0.5rem !important;
 }
 
@@ -8053,7 +8055,7 @@ section.news > div > div > a > div > img {
   padding-bottom: 1.5rem !important;
 }
 
-.py-5, section.cust > div {
+.py-5, body.home section.cust > div {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
@@ -8066,11 +8068,11 @@ section.news > div > div > a > div > img {
   padding-top: 0.25rem !important;
 }
 
-.pt-2, section.regates > div > div:last-child > h3, section.regates > div > div:last-child > .h3, section.news > div > div > a > div > div > h3, section.news > div > div > a > div > div > .h3 {
+.pt-2, body.home section.regates > div > div:last-child > h3, body.home section.regates > div > div:last-child > .h3, body.home section.news > div > div > a > div > div > h3, body.home section.news > div > div > a > div > div > .h3 {
   padding-top: 0.5rem !important;
 }
 
-.pt-3, footer > div.footer-page {
+.pt-3 {
   padding-top: 1rem !important;
 }
 
@@ -8078,7 +8080,7 @@ section.news > div > div > a > div > img {
   padding-top: 1.5rem !important;
 }
 
-.pt-5 {
+.pt-5, footer > div.footer-info > div {
   padding-top: 3rem !important;
 }
 
@@ -8114,7 +8116,7 @@ section.news > div > div > a > div > img {
   padding-bottom: 0.25rem !important;
 }
 
-.pb-2, section.regates > div > div:last-child > div {
+.pb-2, body.home section.regates > div > div:last-child > div {
   padding-bottom: 0.5rem !important;
 }
 
@@ -8130,7 +8132,7 @@ section.news > div > div > a > div > img {
   padding-bottom: 3rem !important;
 }
 
-.ps-0, section.all {
+.ps-0, body.page section, body.home section.all {
   padding-left: 0 !important;
 }
 
@@ -8254,7 +8256,7 @@ section.news > div > div > a > div > img {
   font-size: 1rem !important;
 }
 
-.fst-italic, section.all > header > p > a, section.all > header > h2, section.all > header > .h2 {
+.fst-italic, body.page section > header > p > a, body.page section > header > h2, body.page section > header > .h2, body.home section.all > header > p > a, body.home section.all > header > h2, body.home section.all > header > .h2 {
   font-style: italic !important;
 }
 
@@ -8266,7 +8268,7 @@ section.news > div > div > a > div > img {
   font-weight: lighter !important;
 }
 
-.fw-light, section.regates > div > div:last-child > h3, section.regates > div > div:last-child > .h3, section.news h3, section.news .h3, section.all > header > p > a, section.all > header > h2, section.all > header > .h2, footer > div.footer-page p {
+.fw-light, body.page section > header > p > a, body.page section > header > h2, body.page section > header > .h2, body.home section.regates > div > div:last-child > h3, body.home section.regates > div > div:last-child > .h3, body.home section.news h3, body.home section.news .h3, body.home section.all > header > p > a, body.home section.all > header > h2, body.home section.all > header > .h2, footer > div.footer-info__copyright p {
   font-weight: 300 !important;
 }
 
@@ -8302,7 +8304,7 @@ section.news > div > div > a > div > img {
   line-height: 1.5 !important;
 }
 
-.lh-lg, section.regates > div > div:last-child > div, section.news > div > div > a > div {
+.lh-lg, body.page section > article, body.home section.regates > div > div:last-child > div, body.home section.news > div > div > a > div {
   line-height: 2 !important;
 }
 
@@ -8310,7 +8312,7 @@ section.news > div > div > a > div > img {
   text-align: left !important;
 }
 
-.text-end, section.all > header > p {
+.text-end, body.page section > header > p, body.home section.all > header > p {
   text-align: right !important;
 }
 
@@ -8318,7 +8320,7 @@ section.news > div > div > a > div > img {
   text-align: center !important;
 }
 
-.text-decoration-none, section.news > div > div > a, section.all > header > p > a {
+.text-decoration-none, body.page section > header > p > a, body.home section.news > div > div > a, body.home section.all > header > p > a {
   text-decoration: none !important;
 }
 
@@ -8392,7 +8394,7 @@ section.news > div > div > a > div > img {
   color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-dark, section.news > div > div > a {
+.text-dark, body.home section.news > div > div > a {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
 }
@@ -8402,7 +8404,7 @@ section.news > div > div > a > div > img {
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-white {
+.text-white, footer > div.footer-info__address {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
 }
@@ -8412,7 +8414,7 @@ section.news > div > div > a > div > img {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-muted, section.news > div > div > a > div > p, section.all > header > p > a {
+.text-muted, body.page section > header > p > a, body.home section.news > div > div > a > div > p, body.home section.all > header > p > a {
   --bs-text-opacity: 1;
   color: var(--bs-secondary-color) !important;
 }
@@ -8442,7 +8444,7 @@ section.news > div > div > a > div > img {
   color: var(--bs-emphasis-color) !important;
 }
 
-.text-reset, section.news > div > div > a > div {
+.text-reset, body.home section.news > div > div > a > div {
   --bs-text-opacity: 1;
   color: inherit !important;
 }
@@ -8650,7 +8652,7 @@ section.news > div > div > a > div > img {
   border-radius: var(--bs-border-radius) !important;
 }
 
-.rounded-0, section.regates > div > div:last-child > a, section.news > div > div > a > div > img, section.news > div > div > a > div {
+.rounded-0, body.home section.regates > div > div:last-child > a, body.home section.news > div > div > a > div > img, body.home section.news > div > div > a > div {
   border-radius: 0 !important;
 }
 
@@ -8921,7 +8923,7 @@ section.news > div > div > a > div > img {
   .d-sm-inline-block {
     display: inline-block !important;
   }
-  .d-sm-block, section.news > a {
+  .d-sm-block, body.home section.news > a {
     display: block !important;
   }
   .d-sm-grid {
@@ -9468,7 +9470,7 @@ section.news > div > div > a > div > img {
   .d-md-inline-block {
     display: inline-block !important;
   }
-  .d-md-block, section.all > header > p {
+  .d-md-block, body.page section > header > p, body.home section.all > header > p {
     display: block !important;
   }
   .d-md-grid {
@@ -9489,7 +9491,7 @@ section.news > div > div > a > div > img {
   .d-md-inline-flex {
     display: inline-flex !important;
   }
-  .d-md-none, section.news > a {
+  .d-md-none, body.home section.news > a {
     display: none !important;
   }
   .flex-md-fill {
@@ -9621,7 +9623,7 @@ section.news > div > div > a > div > img {
   .order-md-last {
     order: 6 !important;
   }
-  .m-md-0, section.all > header {
+  .m-md-0, body.page section > header, body.home section.all > header {
     margin: 0 !important;
   }
   .m-md-1 {
@@ -9710,10 +9712,10 @@ section.news > div > div > a > div > img {
   .mt-md-3 {
     margin-top: 1rem !important;
   }
-  .mt-md-4, section.all {
+  .mt-md-4, body.home section.all {
     margin-top: 1.5rem !important;
   }
-  .mt-md-5 {
+  .mt-md-5, body.page section > article, body.page section {
     margin-top: 3rem !important;
   }
   .mt-md-auto {
@@ -9863,7 +9865,7 @@ section.news > div > div > a > div > img {
   .pt-md-4 {
     padding-top: 1.5rem !important;
   }
-  .pt-md-5, footer > div.footer-page {
+  .pt-md-5 {
     padding-top: 3rem !important;
   }
   .pe-md-0 {
@@ -9917,7 +9919,7 @@ section.news > div > div > a > div > img {
   .ps-md-4 {
     padding-left: 1.5rem !important;
   }
-  .ps-md-5, section.regates > div > div:last-child {
+  .ps-md-5, body.home section.regates > div > div:last-child {
     padding-left: 3rem !important;
   }
   .gap-md-0 {
@@ -11731,11 +11733,11 @@ section.news > div > div > a > div > img {
   background-color: #de5c9d;
 }
 
-.bg-yellow, section.cust > div > div {
+.bg-yellow, body.home section.cust > div > div {
   background-color: #EECC88;
 }
 
-.bg-purple, section.cust {
+.bg-purple, body.home section.cust {
   background-color: #abaad0;
 }
 
@@ -11743,7 +11745,7 @@ section.news > div > div > a > div > img {
   --diagonal-section-offset: 50px;
 }
 
-.diagonal-section, section.cust,
+.diagonal-section, body.home section.cust,
 .diagonal-section-top,
 .diagonal-section-bottom {
   position: relative;
@@ -11754,22 +11756,22 @@ section.news > div > div > a > div > img {
 }
 
 @supports (clip-path: inset(50%)) {
-  .diagonal-section, section.cust, .diagonal-section-top.diagonal-section-bottom {
+  .diagonal-section, body.home section.cust, .diagonal-section-top.diagonal-section-bottom {
     padding-top: calc(var(--diagonal-section-offset) / 2);
     padding-bottom: calc(var(--diagonal-section-offset) / 2);
     clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
   }
-  .diagonal-section--flip-x, section.cust {
+  .diagonal-section--flip-x, body.home section.cust {
     clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
   }
   .diagonal-section-top {
     padding-top: calc(var(--diagonal-section-offset) / 2);
     clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% 100%, 0% 100%);
   }
-  .diagonal-section-top--flip-x {
+  .diagonal-section-top--flip-x, footer > div.footer-info {
     clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% 100%, 0% 100%);
   }
-  .diagonal-section-top--flip-x.diagonal-section-bottom {
+  .diagonal-section-top--flip-x.diagonal-section-bottom, footer > div.diagonal-section-bottom.footer-info {
     clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% 100%, 0% calc(100% - var(--diagonal-section-offset)));
   }
   .diagonal-section-bottom {
@@ -11782,15 +11784,12 @@ section.news > div > div > a > div > img {
   .diagonal-section-bottom--flip-x.diagonal-section-top {
     clip-path: polygon(0% 0%, 100% var(--diagonal-section-offset), 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
   }
-  .diagonal-section-top--flip-x.diagonal-section-bottom--flip-x {
+  .diagonal-section-top--flip-x.diagonal-section-bottom--flip-x, footer > div.diagonal-section-bottom--flip-x.footer-info {
     clip-path: polygon(0% var(--diagonal-section-offset), 100% 0%, 100% calc(100% - var(--diagonal-section-offset)), 0% 100%);
   }
 }
 [data-bs-toggle=offcanvas] {
   color: var(--dark);
-}
-header.banner {
-  min-height: 10vw;
 }
 header.banner > figure > img:first-of-type {
   position: absolute;
@@ -11799,27 +11798,44 @@ header.banner > figure > img:first-of-type {
   opacity: 50%;
 }
 
-footer {
-  background-color: #333;
-  min-height: 20vh;
+footer > div.footer-info {
+  background-color: #646464;
 }
-section.news > div > div > a > div > img {
+footer > div.footer-info__copyright {
+  background-color: #333;
+}
+body.home header.banner > figure > img {
+  max-height: 30vw;
+}
+body.home section.news > div > div > a > div > img {
   object-fit: cover;
   min-height: 15vw;
 }
-section.news > div > div > a > div > div {
+body.home section.news > div > div > a > div > div {
   min-height: 10vw;
 }
-section.news > a {
+body.home section.news > a {
   width: 90%;
   height: 50px;
 }
-section.regates > div {
+body.home section.regates > div {
   min-height: 15vw;
 }
-section.regates > div > div:first-child > img {
+body.home section.regates > div:hover img {
+  filter: blur(0.1rem);
+}
+body.home section.regates > div > div:first-child > img {
   min-height: 100%;
 }
-section.cust > div > div {
+@media (min-width: 992px) {
+  body.home section.regates > div > div:last-child > a {
+    width: 50% !important;
+  }
+}
+body.home section.cust > div > div {
   min-height: 20vw;
+}
+
+body.page header.banner > figure > img {
+  max-height: 20vw;
 }

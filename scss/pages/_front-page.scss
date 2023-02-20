@@ -1,0 +1,17 @@
+
+body.home {
+    header.banner {
+        > figure {
+            > img {
+                max-height: 30vw;
+            }
+        }
+    }
+    @import 'sections/sec-all';
+
+    @import 'sections/sec-news';
+
+    @import 'sections/sec-regates';
+
+    @import 'sections/sec-cust';
+}

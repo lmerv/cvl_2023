@@ -1,11 +1,10 @@
 header.banner {
   @extend .container-fluid;
-  min-height: 10vw;
   @extend .p-0;
   @extend .shadow;
   > figure {
     > img {
-      @extend .img-fluid;
+      @extend .img-fluid, .object-fit-cover;
       }
     > img:first-of-type {
     position: absolute;

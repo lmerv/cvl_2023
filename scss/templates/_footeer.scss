@@ -1,14 +1,23 @@
 footer {
   @extend  .container-fluid;
-  @extend .border-top, .border-5, .border-primary-subtle;
-  background-color:  #333;
-  min-height: 20vh; 
-  > div.footer-page {
-    @extend .d-block, .align-items-center;
-    @extend .pt-3;
-    @extend .pt-md-5;
-    p {
-      @extend .link-light, .fw-light;
+  @extend .m-0, .p-0;
+  > div.footer-info {
+    @extend  .diagonal-section-top--flip-x;
+    background-color:  #646464;
+    > div {
+      @extend .container, .pt-5, .d-flex, .align-items-center;
+    }
+    &__address {
+      @extend .text-white;
+    }
+    &__copyright {
+      @extend .d-block, .align-items-center;
+      @extend .border-top, .border-5, .border-primary;
+      background-color:  #333;
+      @extend .my-5;
+      p {
+        @extend .link-light, .fw-light;
+      }
     }
   }
 }
