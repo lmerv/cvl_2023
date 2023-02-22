@@ -1,23 +1,37 @@
 footer {
   @extend  .container-fluid;
   @extend .m-0, .p-0;
-  > div.footer-info {
+  @extend .text-white, .fw-light;
+  & .footer-info {
     @extend  .diagonal-section-top--flip-x;
     background-color:  #646464;
     > div {
-      @extend .container, .pt-5, .d-flex, .align-items-center;
+      @extend .d-flex, .align-items-center, .justify-content-between, .mx-auto, .px-5, .pt-5;
+      h3 {
+        @extend .border-bottom, .border-1, .border-white;
+      }
+      a {
+        @extend .link-light, .text-decoration-none;
+      }
     }
-    &__address {
-      @extend .text-white;
+    &__spacer {
+      content: "&nbsp;";
+      min-height: 5vw;
+    }
+    > &__map {
+      min-height: 20vw;
+      @extend .m-0, .p-0;
+      > iframe {
+        @extend .w-100;
+        min-height: 450px;
+      }
+      a {
+        @extend .text-black;
+      }
     }
     &__copyright {
-      @extend .d-block, .align-items-center;
-      @extend .border-top, .border-5, .border-primary;
+      @extend .justify-content-around;
       background-color:  #333;
-      @extend .my-5;
-      p {
-        @extend .link-light, .fw-light;
-      }
     }
   }
 }

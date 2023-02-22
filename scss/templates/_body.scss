@@ -3,14 +3,14 @@ body {
     color: var(--bs-body-color-rgb);
     @extend .m-0, .p-0;
     @extend .lh-lg;
-    // ul, ol {
-    //   list-style-type: none;
-    //   @extend .p-0;
-    //   + li {
-    //     @extend .list-group-item;
-    //   }
+    ul, ol {
+      list-style-type: none;
+      @extend .p-0;
+      + li {
+        @extend .list-group-item;
+      }
   
-    // }
+    }
     & h1, & h2, & h3, & h4, & h5 {
       font-family: var(--bs-font-family);
       font-weight: 200;
