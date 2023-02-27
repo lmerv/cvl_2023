@@ -23,7 +23,8 @@ section.regates {
         }
       }
     > div:last-child {
-      @extend .col-sm-8, .ps-md-5, .d-flex, .flex-wrap, .justify-content-start;
+      @extend .col-sm-8, .ps-md-5;
+      // @extend .col-sm-8, .ps-md-5, .d-flex, .flex-wrap, .justify-content-start;
       > h3 {
         @extend .fw-light, .my-2, .pt-2;
       }
@@ -31,6 +32,7 @@ section.regates {
         @extend .lh-lg, .pb-2;
       }
       > a {
+        @extend .d-flex, .flex-wrap, .justify-content-center;
         @extend .btn, .btn-primary, .align-bottom, .rounded-0, .w-100, .my-auto, .mx-auto, .p-2;
         @include media-breakpoint-up(lg) { 
           width: 50% !important;

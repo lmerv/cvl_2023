@@ -5,14 +5,25 @@ section.cust {
     @extend .diagonal-section, .diagonal-section--flip-x;
     // min-height: 20vw;
     @extend .my-5;
-    @extend .bg-purple;
+    // @extend .bg-purple;
+    background-color: #ea5933;
+    @extend .text-white;
     > div {
       @extend .container;
       @extend .mx-auto, .py-5;
       > div {
-        @extend .d-flex, .align-items-center;
-        min-height: 20vw;
-        @extend .bg-yellow;
+        @extend .row;
+        > figure {
+          @extend .col-4;
+          @extend .object-fit-cover;
+          > img {
+            @extend .img-fluid;
+          }
+        }
+        > div {
+          @extend .col-7;
+          @extend .mt-2, .mt-md-5;
+        }
       }
     }
   }
