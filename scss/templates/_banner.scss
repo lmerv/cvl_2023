@@ -3,14 +3,29 @@ header.banner {
   @extend .p-0;
   @extend .shadow;
   > figure {
-    > img {
-      @extend .img-fluid, .object-fit-cover;
-      }
-    > img:first-of-type {
-    position: absolute;
-    mix-blend-mode: lighten;
-    filter: blur(50px);
-    opacity: 50%
+    .wp-block-cover, .wp-block-cover-image {
+      @extend .p-0;
+      min-height: 45vw;
     }
+    @include media-breakpoint-up(md) {
+      .wp-block-cover, .wp-block-cover-image {
+       min-height: 35vw;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      .wp-block-cover, .wp-block-cover-image {
+       min-height: 25vw;
+      }
+    }
+    // > img {
+    //   @extend .img-fluid, .object-fit-cover;
+    //   max-height: clamp(10vw, 10em, 25vw);
+    //   }
+    // > img:first-of-type {
+    // position: absolute;
+    // mix-blend-mode: lighten;
+    // filter: blur(50px);
+    // opacity: 50%
+    // }
   }
 }

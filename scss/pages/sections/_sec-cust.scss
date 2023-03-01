@@ -12,16 +12,20 @@ section.cust {
       @extend .container;
       @extend .mx-auto, .py-5;
       > div {
-        @extend .row;
+        @extend .row, .p-2, .p-md-0;
         > figure {
-          @extend .col-4;
-          @extend .object-fit-cover;
+          @extend  .col, .col-md-4;
+          @extend .rounded-0;
+          object-fit: cover;
+          width:100%;
+          height: clamp(200px, 10em, 400px);
+          position: relative; 
           > img {
             @extend .img-fluid;
           }
         }
         > div {
-          @extend .col-7;
+          @extend .col, .col-md-7;
           @extend .mt-2, .mt-md-5;
         }
       }

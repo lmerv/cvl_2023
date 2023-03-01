@@ -40,7 +40,9 @@
     @extend .card-img-top;
     @extend .rounded-0;
     object-fit: cover;
-    min-height: 15vw;
+    width:100%;
+    height: clamp(200px, 10em, 400px);
+    position: relative; 
   }
   > div {
     @extend .card-body;

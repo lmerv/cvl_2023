@@ -7,24 +7,21 @@ section.regates {
     @extend .border-primary-subtle;
     }
   > div {
-    // @extend .row;
-    min-height: 15vw;
-    @extend .my-5, .p-0;
+    @extend .my-5, .px-1;
     > &:hover {
        img {
         filter: blur(0.1rem);
       }
     }
     > div:first-child {
-      @extend .col-sm-4, .p-0;
+      @extend .col-12, .col-md-3, .p-0;
+      @extend .object-fit-cover;
         > img {
-        @extend .img-fluid, .object-fit-cover;
-        min-height: 100%;
+        @extend .img-fluid;
         }
       }
     > div:last-child {
-      @extend .col-sm-8, .ps-md-5;
-      // @extend .col-sm-8, .ps-md-5, .d-flex, .flex-wrap, .justify-content-start;
+      @extend .col-12, .col-md-9, .ps-md-5;
       > h3 {
         @extend .fw-light, .my-2, .pt-2;
       }
