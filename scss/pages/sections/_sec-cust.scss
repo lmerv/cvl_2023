@@ -1,13 +1,15 @@
 // 
 //  CUST
-// 
+
 section.cust {
     @extend .diagonal-section, .diagonal-section--flip-x;
     // min-height: 20vw;
     @extend .my-5;
     // @extend .bg-purple;
-    background-color: #ea5933;
-    @extend .text-white;
+     background-color: #f0ede5; 
+    // #ea5933;
+    // #f0ede5;
+    @extend .text-black;
     > div {
       @extend .container;
       @extend .mx-auto, .py-5;

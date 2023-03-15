@@ -1,0 +1,19 @@
+.offcanvas {
+    background-color: #f6f1eb;
+    .offcanvas-body {
+        @extend .pt-0;
+        > .widget {
+            @extend .mb-5;
+            > .widgettitle.h2 {
+                font-style: italic;
+                border-bottom: 1px solid #343a40;
+            }
+            > ol li a {
+                display: block;
+                color: #212529;
+                text-decoration: none;
+                padding: .2vw
+            }
+        }
+    }   
+}

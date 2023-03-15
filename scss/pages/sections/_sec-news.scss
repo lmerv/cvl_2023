@@ -1,6 +1,15 @@
 // 
 //  NEWS
 //
+//
+@mixin multiline  {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; /* start showing ellipsis when 3rd line is reached */
+        white-space: pre-wrap; /* let the text wrap preserving spaces */
+}
+//
 section.news {
     @extend .container;
     > header {
@@ -15,10 +24,11 @@ section.news {
             > a {
                 @extend .text-dark;
                 @extend .text-decoration-none;
+                
                 > div {
                 @include card-model-all;
                 @include card-body-all;
-                }        
+                }
             }
         }
         > div.sticky {

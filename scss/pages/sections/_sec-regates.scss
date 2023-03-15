@@ -5,34 +5,54 @@ section.regates {
   @extend .container;
   > header {
     @extend .border-primary-subtle;
+    @extend .mb-md-3;
     }
   > div {
-    @extend .my-5, .px-1;
+    @extend .row, .px-1;    
     > &:hover {
        img {
         filter: blur(0.1rem);
       }
     }
     > div:first-child {
-      @extend .col-12, .col-md-3, .p-0;
-      @extend .object-fit-cover;
+      @extend .col-12, .col-sm-5, .col-md-4, .p-0;
         > img {
-        @extend .img-fluid;
+        @extend .object-fit-cover;
+        min-height: 10em;
         }
       }
+    @include media-breakpoint-up(md) {
+      > div:first-child {
+        aspect-ratio: 1 / 1;
+        max-height: 20em;
+          > img {
+           max-height: clamp(10%, 20em, 100%);
+          }
+        }     
+    }
+    @include media-breakpoint-up(lg) {
+      > div:first-child {
+        aspect-ratio: 16 / 9;
+        max-height: 20em;
+          > img {
+           max-height: clamp(10%, 20em, 100%);
+          }
+        }     
+    }    
     > div:last-child {
-      @extend .col-12, .col-md-9, .ps-md-5;
+      @extend .col-12, .col-sm-7, .col-md-8, .ps-md-5;
+      @extend .d-flex, .flex-column;
       > h3 {
-        @extend .fw-light, .my-2, .pt-2;
+        @extend .fw-light, .my-2, .my-md-3;
       }
       > div {
-        @extend .lh-lg, .pb-2;
+        @extend .lh-lg, .mb-2;
+        overflow: hidden;
       }
       > a {
-        @extend .d-flex, .flex-wrap, .justify-content-center;
-        @extend .btn, .btn-primary, .align-bottom, .rounded-0, .w-100, .my-auto, .mx-auto, .p-2;
+        @extend .btn, .btn-primary, .align-bottom, .rounded-0, .w-100, .my-auto, .mx-auto, ;
         @include media-breakpoint-up(lg) { 
-          width: 50% !important;
+        width: 50% !important;
         }
       }
 

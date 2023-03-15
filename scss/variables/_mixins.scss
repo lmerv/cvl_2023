@@ -44,9 +44,20 @@
     height: clamp(200px, 10em, 400px);
     position: relative; 
   }
+  > header {
+    @extend .p-1, .p-md-2;
+  }
   > div {
     @extend .card-body;
-    min-height: 10vw;
+    // Mulit line
+    // min-height: 3vw;
+    // overflow: hidden;
+    // display: -webkit-box;
+    // -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 1; /* start showing ellipsis when 3rd line is reached */
+    // white-space: normal; /* let the text wrap preserving spaces */
+
+
     > h3 {
       @extend .pt-2;
     }

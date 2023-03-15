@@ -17,15 +17,15 @@ header.banner {
        min-height: 25vw;
       }
     }
-    // > img {
-    //   @extend .img-fluid, .object-fit-cover;
-    //   max-height: clamp(10vw, 10em, 25vw);
-    //   }
-    // > img:first-of-type {
-    // position: absolute;
-    // mix-blend-mode: lighten;
-    // filter: blur(50px);
-    // opacity: 50%
-    // }
+    > img {
+      @extend .img-fluid, .object-fit-cover;
+      max-height: clamp(10vw, 10em, 25vw);
+      }
+    > img:first-of-type {
+    position: absolute;
+    mix-blend-mode: lighten;
+    filter: blur(50px);
+    opacity: 50%
+    }
   }
 }

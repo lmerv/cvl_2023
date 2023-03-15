@@ -2,11 +2,17 @@ footer {
   @extend  .container-fluid;
   @extend .m-0, .p-0;
   @extend .text-white, .fw-light;
-  & .footer-info {
-    @extend  .diagonal-section-top--flip-x;
+  & .footer-info__map {
     background-color:  #646464;
+  }
+  & .footer-info {
+      @extend .row, .m-0, .p-0;
+      background-color:  #646464;
+      // border: #646464;
     > div {
-      @extend .d-flex, .align-items-center, .justify-content-between, .mx-auto, .px-5, .pt-5;
+      @extend .col, .p-5;
+      max-width: 33%;
+      // @extend .d-flex, .align-items-center, .justify-content-start, .mx-auto, .px-5, .pt-5;
       h3 {
         @extend .border-bottom, .border-1, .border-white;
       }
@@ -14,24 +20,17 @@ footer {
         @extend .link-light, .text-decoration-none;
       }
     }
-    &__spacer {
-      content: "&nbsp;";
-      min-height: 5vw;
-    }
     > &__map {
       min-height: 20vw;
       @extend .m-0, .p-0;
-      > iframe {
-        @extend .w-100;
-        min-height: 450px;
-      }
-      a {
-        @extend .text-black;
+      img {
+        @extend .img-fluid;
       }
     }
     &__copyright {
-      @extend .justify-content-around;
-      background-color:  #333;
+      @extend .d-flex, .align-items-center, .justify-content-center, .mx-auto, .py-5, .text-decoration-none;
+      background-color:  #465566;
+      min-height: 5vw;
     }
   }
 }
